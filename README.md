@@ -34,3 +34,5 @@ Meld het via het tabblad Issues bovenaan deze pagina.
 
 Met dank aan
 De schakelaar voor licht en donker is geïnspireerd door de animated day/night toggle van jamiewilsonict op CodePen.
+
+Gemaakt door Claude, met Nerud De Zutter.
