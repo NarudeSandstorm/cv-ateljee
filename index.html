@@ -4,6 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CV Ateljee</title>
+<meta name="description" content="Gratis CV-maker in je browser. Maak een verzorgd CV en een motivatiebrief die bij elkaar passen. Geen account, je gegevens blijven op je eigen computer.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CV Ateljee – gratis CV-maker">
+<meta property="og:description" content="Maak een verzorgd CV en een motivatiebrief die bij elkaar passen. Geen account, je gegevens blijven op je eigen computer.">
+<meta property="og:url" content="https://narudesandstorm.github.io/cv-ateljee/">
+<meta property="og:image" content="https://narudesandstorm.github.io/cv-ateljee/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="nl_BE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2453d6">
 <script>(function(){try{var t=JSON.parse(localStorage.getItem('cvbouwer.ui')||'{}').theme;if(t==='donker'||(t!=='licht'&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232453d6'/%3E%3Ctext x='32' y='41.5' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='25' font-weight='800' letter-spacing='-1' fill='%23fff'%3ECVA%3C/text%3E%3C/svg%3E">
@@ -322,6 +333,9 @@ select.preset:hover{border-color:var(--ui-brand)}
 .info-list li:last-child{border:0}
 .info-list kbd{font:600 12px/1 system-ui,sans-serif;background:var(--ui-bg);border:1px solid var(--ui-line);border-bottom-width:2px;border-radius:5px;padding:4px 6px;white-space:nowrap}
 .info-list .k{min-width:150px}
+.mem-bar{display:block;height:6px;border-radius:3px;background:var(--ui-line);margin-top:6px;overflow:hidden}
+.mem-bar i{display:block;height:100%;background:var(--ui-brand);border-radius:3px}
+.mem-bar i.full{background:var(--ui-danger)}
 
 .modal{position:fixed;inset:0;background:rgba(20,25,35,.45);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
 .modal.open{display:flex}
@@ -450,11 +464,23 @@ details.ck-more > summary,details.ck-ign > summary{cursor:pointer;font-weight:60
 .apps-view{position:fixed;top:58px;left:0;right:0;bottom:0;background:var(--ui-bg);overflow:auto;z-index:15}
 .apps-view[hidden]{display:none}
 .apps-inner{max-width:1240px;margin:0 auto;padding:22px 20px 60px}
+.apps-back{display:inline-flex;align-items:center;gap:4px;border:0;background:transparent;color:var(--ui-brand);font:inherit;font-weight:600;font-size:14px;padding:6px 10px 6px 4px;margin:0;border-radius:8px;cursor:pointer;border:1px solid var(--ui-line)}
+.apps-back:hover{background:var(--ui-brand-soft)}
+.apps-back svg{width:18px;height:18px}
+.tb-pair{display:flex;gap:2px;padding:2px;border-radius:10px;background:var(--ui-bg)}
+.tb-pair .tb-btn{padding:6px 12px}
+.tb-pair .tb-btn:not(.on){color:var(--ui-muted)}
+.tb-pair .tb-btn.on{background:var(--ui-card);color:var(--ui-text);box-shadow:0 1px 2px rgba(16,24,40,.12)}
+.tb-btn.on{background:var(--ui-brand-soft);color:var(--ui-brand);font-weight:600}
 .apps-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
-.apps-head h2{margin:0;font-size:22px;flex:1}
+.apps-head h2{margin:0 6px 0 0;font-size:22px}
+.apps-sp{flex:1}
 .apps-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(330px,1fr);gap:18px;align-items:start}
 .apps-box{background:var(--ui-card);border:1px solid var(--ui-line);border-radius:var(--ui-radius);overflow:hidden}
-.apps-box h3{margin:0;padding:12px 14px;font-size:14px;border-bottom:1px solid var(--ui-line);display:flex;align-items:center;gap:8px}
+.apps-box h3{margin:0;padding:12px 14px;font-size:14px;border-bottom:1px solid var(--ui-line);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.view-seg,.filter-seg{flex-wrap:nowrap;white-space:nowrap}
+.b-hint .touch{display:none}
+@media (hover:none),(max-width:700px){.b-hint .mouse{display:none}.b-hint .touch{display:inline}.view-seg{margin-left:auto}.apps-box > h3 .filter-seg{margin-left:0}}
 .due{background:#fff7ed;border:1px solid #f5d0a9;border-radius:var(--ui-radius);padding:10px 14px;margin-bottom:16px}
 .due h3{margin:0 0 6px;font-size:14px;color:#9a4d06}
 .due-item{display:flex;gap:10px;align-items:center;padding:5px 0;cursor:pointer;border:0;background:transparent;width:100%;text-align:left}
@@ -471,6 +497,24 @@ details.ck-more > summary,details.ck-ign > summary{cursor:pointer;font-weight:60
 .app-table .overdue{color:#b42318;font-weight:700}
 .st{display:inline-block;border-radius:999px;padding:2px 9px;font-size:12px;font-weight:600;white-space:nowrap}
 .st-0{background:var(--ui-sunk);color:#444}.st-1{background:#e7efff;color:#1d4fb8}.st-2{background:#fdf0dc;color:#8a5208}.st-3{background:#e3f3ea;color:#1d6b42}.st-4{background:#fbe9e9;color:#9b2c2c}.st-5{background:#f1eef6;color:#5b4a7a}
+.view-seg{margin-left:10px}
+.view-seg button,.filter-seg button{font-size:12.5px}
+.apps-box > h3 .filter-seg{margin-left:auto}
+.board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(170px,1fr);gap:10px;padding:12px;overflow-x:auto;align-items:start}
+.b-col{background:var(--ui-sunk);border:1px solid var(--ui-line2);border-radius:10px;padding:8px;min-height:140px;transition:background .15s,border-color .15s}
+.b-col.over{background:var(--ui-brand-soft);border-color:var(--ui-brand)}
+.b-head{display:flex;align-items:center;justify-content:space-between;margin:0 2px 8px}
+.b-head small{color:var(--ui-muted);font-weight:600}
+.b-card{display:flex;flex-direction:column;gap:2px;background:var(--ui-card);border:1px solid var(--ui-line);border-radius:8px;padding:8px 10px;margin-bottom:8px;cursor:grab;font-size:13px;box-shadow:0 1px 2px rgba(16,24,40,.06)}
+.b-card span{color:var(--ui-text2);font-size:12.5px}
+.b-card small{color:var(--ui-muted);font-size:11.5px;margin-top:2px}
+.b-card small.overdue{color:#b42318;font-weight:700}
+html[data-theme="dark"] .b-card small.overdue{color:#ff8f86}
+.b-card:hover{border-color:var(--ui-dash)}
+.b-card.sel{border-color:var(--ui-brand);box-shadow:0 0 0 2px var(--ui-brand-soft)}
+.b-card.dragging{opacity:.45}
+.b-empty{border:1px dashed var(--ui-dash);border-radius:8px;padding:14px 8px;text-align:center;color:var(--ui-muted);font-size:12px}
+.b-hint{margin:0 12px 12px}
 .apps-empty{padding:30px 16px;text-align:center;color:var(--ui-muted)}
 .app-form{padding:14px}
 .app-form .row-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
@@ -532,7 +576,8 @@ details.ck-more > summary,details.ck-ign > summary{cursor:pointer;font-weight:60
   .topbar .brand{order:0}
   .topbar .dl-split{order:0;margin-left:auto}
   .topbar .tb-spacer{order:1;flex-basis:100%;height:0}
-  .topbar .tb-btn{order:2}
+  .topbar .tb-btn,.topbar .tb-pair{order:2}
+  .topbar .tb-pair .tb-btn{padding:5px 9px}
   .topbar .tb-sep{display:none}
   .topbar .theme-tg{order:2;margin:0 0 0 auto}
   .topbar #btnUndo{order:0;margin-left:auto}
@@ -544,6 +589,13 @@ details.ck-more > summary,details.ck-ign > summary{cursor:pointer;font-weight:60
 @media (max-width:480px){
   .brand-name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .topbar .brand{margin-right:0}
+  .topbar .theme-tg{order:0;margin:0 2px 0 auto}
+  .topbar #btnUndo{margin-left:0}
+}
+@media (max-width:400px){
+  .topbar .tb-btn{padding:5px 6px}
+  .topbar .tb-pair .tb-btn{padding:5px 7px}
+  .doc-name{max-width:80px}
 }
 
 
@@ -980,7 +1032,7 @@ html[data-theme="dark"] .tb-badge{background:#e05c5c}
 <header class="topbar">
   <div class="brand"><span class="brand-mark" aria-hidden="true">CVA</span><span class="brand-name">CV Ateljee</span></div>
   <button class="tb-btn doc-pick" data-top="docs" id="docPick" title="Je CV's: wisselen, nieuw, kopie, naam en taal" aria-haspopup="menu"><span class="doc-name" id="docName"></span><svg class="dp-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-  <button class="tb-btn" data-top="apps" id="btnApps">Sollicitaties</button>
+  <div class="tb-pair" role="group" aria-label="Wat je ziet"><button class="tb-btn on" data-top="cv" id="btnCv" aria-pressed="true">CV</button><button class="tb-btn" data-top="apps" id="btnApps" aria-pressed="false">Sollicitaties</button></div>
   <button class="tb-btn" data-top="file" aria-haspopup="menu">Bestand</button>
   <button class="tb-btn" data-top="help" aria-haspopup="menu">Hulp</button>
   <span class="tb-sep"></span>
@@ -1022,9 +1074,9 @@ html[data-theme="dark"] .tb-badge{background:#e05c5c}
   <div class="apps-inner">
     <div class="apps-head">
       <h2>Sollicitaties</h2>
+      <span class="apps-sp"></span>
       <button class="btn-ghost" id="appsCsv">Download voor Excel</button>
       <button class="btn-primary" id="appsNew">+ Nieuwe sollicitatie</button>
-      <button class="btn-ghost" id="appsClose">Terug naar je CV</button>
     </div>
     <div id="appsDue"></div>
     <div class="apps-grid">
@@ -1306,6 +1358,9 @@ function hexRgb(h){const n=parseInt(h.slice(1),16);return [n>>16,n>>8&255,n&255]
 function mixWhite(hex,amt){return '#'+hexRgb(hex).map(c=>Math.round(c+(255-c)*amt).toString(16).padStart(2,'0')).join('')}
 function lum(hex){const [r,g,b]=hexRgb(hex).map(c=>{c/=255;return c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4)});return .2126*r+.7152*g+.0722*b}
 function isHex(v){return /^#[0-9a-f]{6}$/i.test(v||'')}
+function isImgData(v){ return typeof v==='string' && /^data:image\/[a-z0-9.+-]+;base64,[A-Za-z0-9+\/=]+$/i.test(v); }
+function isFontData(v){ return typeof v==='string' && /^data:[a-z0-9.+\/-]*;base64,[A-Za-z0-9+\/=]+$/i.test(v); }
+function safeFontName(v){ return String(v||'').replace(/["'\\<>{}();:@\/]/g,'').replace(/\s+/g,' ').trim().slice(0,60); }
 // **vet**, *cursief* en ***allebei***. Een sterretje telt alleen als opmaak als het tegen een woord staat,
 // zodat "5 * 3" of "2*4" gewoon tekst blijft. Niet afgesloten sterretjes blijven zichtbaar.
 const FMT_BI = /(^|[\s(\[>"'])\*\*\*(?=\S)([^*<>]+?)(?<=\S)\*\*\*(?=$|[\s.,;:!?)\]<"'])/g;
@@ -1369,7 +1424,7 @@ function defaultDesign(){
     sidePos:{modern:'links',elegant:'rechts',compact:'rechts'}, sideW:{modern:70,elegant:66,compact:66}, headAlign:'links', photoSide:'links', photoInHead:false, photoScale:100,
     dateFmt:'vrij', datePos:'rechts', bullet:'bolletje', dotShape:'rond', dotSize:'normaal', lineW:'normaal', lineStyle:'doorlopend', titleCaps:true, titleIcons:false,
     titleColor:'', dateColor:'', linkColor:'', linkUnderline:false, pageNum:'geen', pageName:false, skillCols:'auto',
-    accent2:'', headSplit:'alles', letterSign:true, artLayout:'uit', metaW:0, artH:34, artX:50, artY:45, artOp:78, artFade:false, artRepeat:false, artNameSide:false, artBand:'boven', letterCt:'rij', letterOrder:[], letterHide:[], lineColor:'licht', lineEnd:'onder', contactStyle:'gewoon', jobLines:false, listStyle:'lijst', barSize:'normaal', barEnds:'rond',
+    accent2:'', headSplit:'alles', letterSign:true, artLayout:'uit', letterLook:'cv', metaW:0, artH:34, artX:50, artY:45, artOp:78, artFade:false, artRepeat:false, artNameSide:false, artBand:'boven', letterCt:'rij', letterOrder:[], letterHide:[], lineColor:'licht', lineEnd:'onder', contactStyle:'gewoon', jobLines:false, listStyle:'lijst', barSize:'normaal', barEnds:'rond',
     bodyFont:'Inter', headFont:'Inter', customFonts:[], fs:10.5, nameSize:25, headSize:9, lineHeight:1.42, spacing:'normaal', marginX:17, marginY:12,
     photoShape:'rond', showPhoto:true, skillStyle:'dots', icons:false, letterPhoto:false, lang:'nl'};
 }
@@ -1387,16 +1442,16 @@ function emptyState(){
 }
 function sampleState(){
   const s = emptyState();
-  Object.assign(s.personal,{firstName:'Lotte',lastName:'Vermeulen',jobTitle:'Projectcoördinator events',email:'lotte.vermeulen@email.be',phone:'+32 470 12 34 56',location:'Gent',linkedin:'linkedin.com/in/lottevermeulen',license:'B'});
+  Object.assign(s.personal,{firstName:'Jouw',lastName:'Naam',jobTitle:'Projectcoördinator events',email:'jouw.naam@example.com',phone:'+32 470 00 00 00',location:'Gent',linkedin:'linkedin.com/in/jouwnaam',license:'B'});
   const [pr,ex,ed,sk,la] = s.sections;
   pr.text = 'Organisatorisch sterke projectcoördinator met **vijf jaar ervaring** in evenementen en hospitality. Ik houd van strakke planningen, duidelijke afspraken en een team dat weet waar het naartoe gaat. Op zoek naar een rol waarin ik projecten van eerste idee tot afbouw mee kan trekken.';
   ex.items = [
-    {id:uid(),hidden:false,title:'Projectcoördinator',org:'Brightside Events',place:'Gent',start:'mrt 2023',end:'',current:true,desc:'- Coördinatie van **25 tot 40 evenementen** per jaar, van 200 tot 8.000 bezoekers\n- Opmaak van planningen, draaiboeken en budgetten tot 150.000 euro\n- Aanspreekpunt voor klanten, leveranciers en stadsdiensten'},
-    {id:uid(),hidden:false,title:'Medewerker sales en planning',org:'Horizon Hospitality',place:'Brugge',start:'sep 2020',end:'feb 2023',current:false,desc:'- Offertes en opvolging voor zakelijke klanten\n- Personeelsplanning voor seizoenspieken\n- Invoering van een nieuw boekingssysteem samen met IT'}
+    {id:uid(),hidden:false,title:'Projectcoördinator',org:'Evenementenbureau',place:'Gent',start:'mrt 2023',end:'',current:true,desc:'- Coördinatie van **25 tot 40 evenementen** per jaar, van 200 tot 8.000 bezoekers\n- Opmaak van planningen, draaiboeken en budgetten tot 150.000 euro\n- Aanspreekpunt voor klanten, leveranciers en stadsdiensten'},
+    {id:uid(),hidden:false,title:'Medewerker sales en planning',org:'Hotelgroep',place:'Brugge',start:'sep 2020',end:'feb 2023',current:false,desc:'- Offertes en opvolging voor zakelijke klanten\n- Personeelsplanning voor seizoenspieken\n- Invoering van een nieuw boekingssysteem samen met IT'}
   ];
   ed.items = [
-    {id:uid(),hidden:false,title:'Bachelor Event- en projectmanagement',org:'Hogeschool Noordzee',place:'Brugge',start:'2017',end:'2020',current:false,desc:'Stage bij een festivalorganisatie, afdeling productie.'},
-    {id:uid(),hidden:false,title:'Secundair onderwijs, Economie-Moderne talen',org:'Sint-Jozefsinstituut',place:'Torhout',start:'2011',end:'2017',current:false,desc:''}
+    {id:uid(),hidden:false,title:'Bachelor Event- en projectmanagement',org:'Hogeschool',place:'Brugge',start:'2017',end:'2020',current:false,desc:'Stage bij een festivalorganisatie, afdeling productie.'},
+    {id:uid(),hidden:false,title:'Secundair onderwijs, Economie-Moderne talen',org:'Secundaire school',place:'Torhout',start:'2011',end:'2017',current:false,desc:''}
   ];
   sk.items = [['Planning en draaiboeken',5],['Budgetbeheer',4],['Klantcontact',5],['Excel en Power Query',4],['Odoo CRM',3]].map(([name,level])=>({id:uid(),hidden:false,name,level}));
   la.items = [['Nederlands','native'],['Engels','fluent'],['Frans','good']].map(([name,level])=>({id:uid(),hidden:false,name,level}));
@@ -1404,7 +1459,7 @@ function sampleState(){
   s.sections.push(it);
   s.letter = {date:'', recName:'{contactpersoon}', recCompany:'{bedrijf}', recAddress:'', subject:'Sollicitatie {functie}',
     greeting:'Geachte {contactpersoon},',
-    body:'Met veel interesse las ik uw vacature voor {functie} bij {bedrijf}. Evenementen van eerste idee tot afbouw begeleiden is precies wat ik de afgelopen vijf jaar bij Brightside Events deed.\n\nIk coördineer er jaarlijks 25 tot 40 evenementen, met budgetten tot 150.000 euro. Wat ik daarbij geleerd heb:\n- een planning is pas goed als iedereen ze begrijpt\n- vroeg en duidelijk communiceren met leveranciers voorkomt de meeste problemen\n\nGraag vertel ik u in een gesprek meer over hoe ik uw team kan versterken.',
+    body:'Met veel interesse las ik uw vacature voor {functie} bij {bedrijf}. Evenementen van eerste idee tot afbouw begeleiden is precies wat ik de afgelopen vijf jaar bij een evenementenbureau deed.\n\nIk coördineer er jaarlijks 25 tot 40 evenementen, met budgetten tot 150.000 euro. Wat ik daarbij geleerd heb:\n- een planning is pas goed als iedereen ze begrijpt\n- vroeg en duidelijk communiceren met leveranciers voorkomt de meeste problemen\n\nGraag vertel ik u in een gesprek meer over hoe ik uw team kan versterken.',
     closing:'Met vriendelijke groeten,'};
   return s;
 }
@@ -1424,8 +1479,8 @@ function normalize(d){
   const base = emptyState(), dd = d.design || {};
   d.personal = Object.assign(base.personal, d.personal);
   if(!d.personal.hide || typeof d.personal.hide!=='object') d.personal.hide = {};
-  if(typeof d.personal.signature!=='string' || !/^data:image\//.test(d.personal.signature)) d.personal.signature = '';
-  if(typeof d.personal.artwork!=='string' || !/^data:image\//.test(d.personal.artwork)) d.personal.artwork = '';
+  // beelden alleen als echte data-URL: geen aanhalingstekens of haakjes, zodat een vervalst bestand niets in de pagina kan smokkelen
+  ['photo','photoSrc','signature','artwork'].forEach(k=>{ if(!isImgData(d.personal[k])) d.personal[k] = ''; });
   d.personal.links = (Array.isArray(d.personal.links) ? d.personal.links : []).filter(l=>l && typeof l==='object')
     .map(l=>({id:typeof l.id==='string'&&l.id ? l.id : uid(), label:typeof l.label==='string'?l.label:'', url:typeof l.url==='string'?l.url:'', hidden:!!l.hidden}));
   d.personal.contactOrder = (Array.isArray(d.personal.contactOrder) ? d.personal.contactOrder : []).filter(k=>typeof k==='string');
@@ -1463,7 +1518,7 @@ function normalize(d){
   ['titleColor','dateColor','linkColor'].forEach(k=>{ if(nd[k]!=='' && !isHex(nd[k])) nd[k] = ''; });
   nd.linkUnderline = nd.linkUnderline===true || nd.linkUnderline==='true';
   nd.pageName = nd.pageName===true || nd.pageName==='true';
-  pick('pageNum',['geen','kort','lang']); pick('skillCols',['auto','1','2','3']);
+  pick('pageNum',['geen','kort','lang']); pick('letterLook',['cv','rustig']); pick('skillCols',['auto','1','2','3']);
   Object.keys(nd.vlak).forEach(k=>{ if(!['geen','licht','vol','eigen'].includes(nd.vlak[k])) nd.vlak[k] = def.vlak[k] || 'geen'; });
   if(!SPACING[nd.spacing]) nd.spacing = def.spacing;
   if(!T[nd.lang]) nd.lang = def.lang;
@@ -1479,7 +1534,7 @@ function normalize(d){
   if(!['rond','vierkant'].includes(nd.photoShape)) nd.photoShape = def.photoShape;
   ['showPhoto','icons','letterPhoto'].forEach(k=>{ nd[k] = nd[k]===true || nd[k]==='true'; });
   const fontOk = id => FONTS.some(f=>f.id===id) || nd.customFonts.some(c=>c && c.name===id);
-  nd.customFonts = nd.customFonts.filter(c=>c && typeof c.name==='string' && typeof c.data==='string' && /^data:/.test(c.data));
+  nd.customFonts = nd.customFonts.filter(c=>c && typeof c.name==='string' && isFontData(c.data)).map(c=>({name:safeFontName(c.name), data:c.data})).filter(c=>c.name);
   if(!fontOk(nd.bodyFont)) nd.bodyFont = def.bodyFont;
   if(!fontOk(nd.headFont)) nd.headFont = def.headFont;
   d.design = nd;
@@ -1863,7 +1918,7 @@ function renderLetter(st, Lin){
   const rec = [L.recName, L.recCompany].concat(String(L.recAddress||'').split(/\r?\n/)).map(x=>(x||'').trim()).filter(Boolean);
   const place = (p.location||'').trim(), date = (L.date||'').trim() || todayStr(d.lang);
   const lc = letterContacts(p,t,d), right = d.letterCt==='rechts';
-  return artHTML(st,true)+'<div class="cv-inner"><div class="cv-head'+(right?' lh-r':'')+'">'+photo+'<div class="hn"><h1 data-ed="p:firstName">'+name+'</h1>'+job+(right?'':letterHeadContact(lc,d))+'</div>'+(right?letterHeadContact(lc,d):'')+'</div>'+
+  return artHTML(Object.assign({}, st, {design:letterDesign(d)}),true)+'<div class="cv-inner"><div class="cv-head'+(right?' lh-r':'')+'">'+photo+'<div class="hn"><h1 data-ed="p:firstName">'+name+'</h1>'+job+(right?'':letterHeadContact(lc,d))+'</div>'+(right?letterHeadContact(lc,d):'')+'</div>'+
     '<div class="letter-meta"><div class="rec" data-ed="L:recName">'+rec.map(esc).join('<br>')+'</div><div class="date" data-ed="L:date">'+esc((place?place+', ':'')+date)+'</div></div>'+
     ((L.subject||'').trim()?'<div class="letter-subj" data-ed="L:subject"><strong>'+esc(t.subject)+':</strong> '+esc(L.subject)+'</div>':'')+
     '<div class="letter-body" data-ed="L:body">'+((L.greeting||'').trim()?'<p data-ed="L:greeting">'+esc(L.greeting)+'</p>':'')+blockHTML(L.body)+
@@ -1889,7 +1944,11 @@ function vlakInfo(d, artOn){
   const color = style==='vol' ? d.accent : style==='licht' ? mixWhite(d.accent,.86) : (isHex(d.vlakColor)?d.vlakColor:'#e6edf4');
   return {style, color, dark: lum(color) < .33};
 }
+// Ontwerp van de brief: Zoals je CV, of Rustig (zonder kleurvlak en banner, met een lijn onder je naam)
+function letterDesign(d){ return d.letterLook==='rustig' ? Object.assign({}, d, {vlak:Object.assign({}, d.vlak, {[d.template]:'geen'}), artLayout:'uit'}) : d; }
+function letterLookMatters(d, P){ const a = artFor(d, P); return !!(vlakInfo(d).color || ['a','b','c'].includes(a)); }
 function applyDesign(el,d,asLetter,pers){
+  if(asLetter) d = letterDesign(d);
   const P = pers || (typeof state!=='undefined' && state ? state.personal : null);
   let art = artFor(d, P); if(asLetter && !['a','b','c'].includes(art)) art = '';
   const v = vlakInfo(d, art), s = el.style, tpl = TEMPLATES.find(t=>t.id===d.template)||TEMPLATES[0];
@@ -2230,6 +2289,7 @@ const QUICK = [
   {id:'kleur', name:'Kleurrijk en creatief', desc:'Kopband, iconen en labels', d:{template:'strak', accent:'#c2410c', headFont:'Poppins', bodyFont:'Nunito Sans', layout:{strak:'tijdlijn'}, titleStyle:'blok', titleIcons:true, bullet:'pijltje', skillStyle:'tags', dotShape:'ruit', icons:true}},
   {id:'compact', name:'Compact op één pagina', desc:'Veel inhoud, kleinere tekst', d:{template:'compact', accent:'#0f766e', headFont:'Inter', bodyFont:'Inter', fs:9.6, lineHeight:1.32, headSize:9, spacing:'compact', marginX:12, marginY:10, skillStyle:'tags', dateFmt:'cijfers'}},
   {id:'minimaal', name:'Minimalistisch', desc:'Zwart-wit en veel witruimte', d:{template:'minimaal', accent:'#111111', textColor:'#22262e', headFont:'Inter', bodyFont:'Inter', bullet:'streepje', skillStyle:'text', dateFmt:'kort'}},
+  {id:'goud', name:'Donker met goud', desc:'Donkere zijbalk met gouden accenten', d:{template:'modern', vlak:{modern:'eigen'}, vlakColor:'#26282d', accent:'#2f3238', accent2:'#c8a45d', headFont:'Cormorant Garamond', bodyFont:'Lato', layout:{modern:'kolom'}, titleStyle:'lijn', dividers:true, skillStyle:'under', icons:true, iconStyle:'cirkel', nameCaps:true, lineColor:'zelfde', dotSize:'klein', barSize:'dun'}},
   {id:'tijdlijn', name:'Tijdlijn', desc:'Je loopbaan als lijn met bolletjes', d:{template:'tijdlijn', accent:'#2f6f8f', headFont:'Montserrat', bodyFont:'Open Sans', dotStyle:'hol', titleStyle:'streep', skillStyle:'bar', dateFmt:'kort'}}
 ];
 // een snelle stijl vertrekt van de standaard, en houdt taal, eigen lettertypes en de keuze voor je foto
@@ -2970,7 +3030,7 @@ $('#fontFile').addEventListener('change', e=>{
   if(f.size > 1.5*1024*1024){ toast('Dit lettertypebestand is groter dan 1,5 MB. Kies een kleinere versie, bijvoorbeeld .woff2.'); return; }
   const r = new FileReader();
   r.onload = ()=>{
-    let name = f.name.replace(/\.(ttf|otf|woff2?)$/i,'').replace(/[-_]+/g,' ').replace(/\b(regular|normal|book)\b/ig,'').trim() || 'Eigen lettertype';
+    let name = f.name.replace(/\.(ttf|otf|woff2?)$/i,'').replace(/[-_]+/g,' ').replace(/\b(regular|normal|book)\b/ig,'').trim(); name = safeFontName(name) || 'Eigen lettertype';
     const d = state.design;
     if(d.customFonts.some(c=>c.name===name)) name += ' 2';
     const ff = new FontFace(name, 'url('+r.result+')');
@@ -3064,7 +3124,10 @@ function renderLetterEditor(){
           (missing.length?'<br><span class="ph-miss">Nog niet ingevuld bij de sollicitatie: '+missing.map(([ph])=>'{'+ph+'}').join(', ')+'.</span>':'')+'</p>'
       : '<p class="hint tip" style="margin-top:0">Dit is je basisbrief. Elke nieuwe sollicitatie start met een kopie ervan. Gebruik invulvelden; die worden per sollicitatie automatisch ingevuld. Klik om ze in te voegen waar je cursor staat:</p>'+
         '<div class="ph-chips">'+PH.map(([ph])=>'<button class="ph-chip" data-ph="'+ph+'">{'+ph+'}</button>').join('')+'</div>')+
-    '<p class="hint" style="margin-top:0">Je naam en stijl komen uit je CV. Pas het ontwerp aan in het tabblad Ontwerp.</p>'+
+    (letterLookMatters(d, state.personal) || d.letterLook==='rustig'
+      ? '<div class="sub-lbl" style="margin-top:0">Ontwerp van de brief</div><div class="seg">'+[['cv','Zoals je CV'],['rustig','Rustig']].map(([v,l])=>'<button type="button" data-llook="'+v+'" class="'+((d.letterLook||'cv')===v?'active':'')+'">'+l+'</button>').join('')+'</div>'+
+        '<p class="hint">'+(d.letterLook==='rustig' ? 'Zonder kleurvlak en banner: alleen je naam, je gegevens en een lijn in je accentkleur. Lettertypes en kleuren komen uit je CV.' : 'Je naam en stijl komen uit je CV, met hetzelfde kleurvlak'+(['a','b','c'].includes(artFor(d,state.personal))?' en dezelfde banner':'')+'. Pas het ontwerp aan in het tabblad Ontwerp.')+'</p>'
+      : '<p class="hint" style="margin-top:0">Je naam en stijl komen uit je CV. Pas het ontwerp aan in het tabblad Ontwerp.</p>')+
     letterContactCard()+
     '<div class="card" style="--c:#0891b2"><div class="card-head">'+secIc('profile')+'<h3>Ontvanger</h3></div><div class="card-body">'+
       lfield('Naam','recName','Bijv. Mevrouw De Smet')+lfield('Bedrijf','recCompany','Bijv. Festivalbureau Noordzee')+lfield('Adres','recAddress','Straat en nummer, postcode en gemeente op een nieuwe regel',1)+
@@ -3206,6 +3269,8 @@ $('#panelLetter').addEventListener('click', e=>{
   if(e.target.closest('[data-lck-go]')){ ui.ckMode = 'brief'; ui.lcheck = true; goTab('check'); return; }
   const lg = e.target.closest('[data-lgo]');
   if(lg){ const f = $('#panelLetter [data-bind="letter.'+lg.dataset.lgo+'"]'); if(f) flashField(f); return; }
+  const ll = e.target.closest('[data-llook]');
+  if(ll){ state.design.letterLook = ll.dataset.llook; save(true); renderPreview(); renderLetterEditor(); return; }
   const ls = e.target.closest('[data-lset]');
   if(ls){ state.design.letterCt = ls.dataset.lset; save(true); renderPreview(); renderLetterEditor(); return; }
   const lm = e.target.closest('[data-lmove]');
@@ -3301,11 +3366,12 @@ function normalizeApp(a){
 }
 function dueApps(){ const t = todayISO(); return store.apps.filter(a=>a.followUp && a.followUp<=t && !CLOSED.includes(a.status)).sort((a,b)=>a.followUp<b.followUp?-1:1); }
 function updAppsBadge(){ const n = dueApps().length; $('#btnApps').innerHTML = 'Sollicitaties'+(n?'<span class="tb-badge" title="Op te volgen">'+n+'</span>':''); }
-const appsUI = {sel:null, filter:'lopend'};
+const appsUI = {sel:null, filter:'lopend', view:(()=>{ try{ return JSON.parse(localStorage.getItem('cvbouwer.ui')||'{}').appsView==='bord' ? 'bord' : 'lijst'; }catch(e){ return 'lijst'; } })()};
 function docById(id){ return store.docs.find(d=>d.id===id); }
 function docData(id){ return id===store.active ? state : (docById(id)||{}).data; }
-function openApps(){ persistNow(); $('#appsView').hidden = false; renderApps(); }
-function closeApps(){ $('#appsView').hidden = true; renderAll(); }
+function topView(apps){ [['#btnCv',!apps],['#btnApps',apps]].forEach(([id,on])=>{ $(id).classList.toggle('on',on); $(id).setAttribute('aria-pressed',String(on)); }); }
+function openApps(){ persistNow(); $('#appsView').hidden = false; topView(true); renderApps(); }
+function closeApps(){ $('#appsView').hidden = true; topView(false); renderAll(); }
 function renderApps(keepDetail){
   // op te volgen
   const due = dueApps();
@@ -3315,7 +3381,22 @@ function renderApps(keepDetail){
   const list = store.apps.filter(a=> appsUI.filter==='alle' ? true : appsUI.filter==='lopend' ? !CLOSED.includes(a.status) : CLOSED.includes(a.status))
     .sort((a,b)=> (b.date||'').localeCompare(a.date||'') || b.created-a.created);
   const counts = {lopend:store.apps.filter(a=>!CLOSED.includes(a.status)).length, afgerond:store.apps.filter(a=>CLOSED.includes(a.status)).length, alle:store.apps.length};
-  $('#appsListBox').innerHTML = '<h3>Overzicht <span class="seg filter-seg">'+[['lopend','Lopend'],['afgerond','Afgerond'],['alle','Alle']].map(([v,l])=>'<button data-filter="'+v+'" class="'+(appsUI.filter===v?'active':'')+'">'+l+' ('+counts[v]+')</button>').join('')+'</span></h3>'+
+  const viewSeg = '<span class="seg view-seg" role="group" aria-label="Weergave">'+[['lijst','Lijst'],['bord','Bord']].map(([v,l])=>'<button data-aview="'+v+'" class="'+(appsUI.view===v?'active':'')+'">'+l+'</button>').join('')+'</span>';
+  if(appsUI.view==='bord'){
+    const cols = STATUSES.filter(st=> appsUI.filter==='alle' ? true : appsUI.filter==='lopend' ? !CLOSED.includes(st) : CLOSED.includes(st));
+    $('#appsListBox').innerHTML = '<h3>Overzicht '+viewSeg+'<span class="seg filter-seg">'+[['lopend','Lopend'],['afgerond','Afgerond'],['alle','Alle']].map(([v,l])=>'<button data-filter="'+v+'" class="'+(appsUI.filter===v?'active':'')+'">'+l+' ('+counts[v]+')</button>').join('')+'</span></h3>'+
+      (store.apps.length ? '<div class="board">'+cols.map(st=>{ const its = list.filter(a=>a.status===st);
+        return '<div class="b-col" data-bcol="'+esc(st)+'"><div class="b-head"><span class="st st-'+STATUSES.indexOf(st)+'">'+esc(st)+'</span><small>'+its.length+'</small></div>'+
+          its.map(a=>{ const od = a.followUp && !CLOSED.includes(a.status) && a.followUp<=todayISO();
+            return '<div class="b-card'+(a.id===appsUI.sel?' sel':'')+'" draggable="true" data-app="'+a.id+'" tabindex="0"><b>'+esc(a.company||'Naamloos bedrijf')+'</b>'+(a.role?'<span>'+esc(a.role)+'</span>':'')+
+              (!CLOSED.includes(a.status) && a.followUp ? '<small class="'+(od?'overdue':'')+'">Opvolgen '+esc(fmtISO(a.followUp))+'</small>' : '')+'</div>'; }).join('')+
+          (its.length?'':'<div class="b-empty">Sleep een sollicitatie hierheen</div>')+'</div>'; }).join('')+'</div><p class="hint b-hint"><span class="mouse">Sleep een kaart naar een andere kolom om de status te wijzigen.</span><span class="touch">Tik op een kaart en kies de status bij de details.</span></p>'
+      : '<div class="apps-empty">Nog geen sollicitaties. Klik op <b>+ Nieuwe sollicitatie</b> om te beginnen.</div>');
+    if(!keepDetail) renderAppDetail();
+    updAppsBadge();
+    return;
+  }
+  $('#appsListBox').innerHTML = '<h3>Overzicht '+viewSeg+'<span class="seg filter-seg">'+[['lopend','Lopend'],['afgerond','Afgerond'],['alle','Alle']].map(([v,l])=>'<button data-filter="'+v+'" class="'+(appsUI.filter===v?'active':'')+'">'+l+' ('+counts[v]+')</button>').join('')+'</span></h3>'+
     (list.length ? '<table class="app-table"><thead><tr><th>Bedrijf en functie</th><th>Status</th><th class="col-hide">Verstuurd</th><th>Opvolgen</th></tr></thead><tbody>'+
       list.map(a=>{ const od = a.followUp && !CLOSED.includes(a.status) && a.followUp<=todayISO();
         return '<tr data-app="'+a.id+'" class="'+(a.id===appsUI.sel?'sel':'')+'"><td><b>'+esc(a.company||'Naamloos bedrijf')+'</b><div class="sub">'+esc(a.role||'')+'</div></td>'+
@@ -3363,9 +3444,10 @@ function newApp(){
   setTimeout(()=>{ const f = $('#af_company'); if(f) f.focus(); }, 30);
 }
 $('#appsNew').addEventListener('click', newApp);
-$('#appsClose').addEventListener('click', closeApps);
+
 $('#appsView').addEventListener('click', e=>{
   const f = e.target.closest('[data-filter]'); if(f){ appsUI.filter = f.dataset.filter; renderApps(); return; }
+  const av = e.target.closest('[data-aview]'); if(av){ appsUI.view = av.dataset.aview; uiPut({appsView:appsUI.view}); renderApps(true); return; }
   const row = e.target.closest('[data-app]'); if(row){ appsUI.sel = row.dataset.app; renderApps(); return; }
   const a = store.apps.find(x=>x.id===appsUI.sel); if(!a) return;
   const plus = e.target.closest('[data-plus]');
@@ -3389,6 +3471,7 @@ $('#appsView').addEventListener('click', e=>{
   if(act==='resnap'){ if(!confirm('De momentopname vervangen door je huidige CV en brief?')) return; if(snapshot(a)){ persist(); renderApps(); toast('Opnieuw vastgelegd'); } return; }
   if(act==='view') viewSent(a);
 });
+$('#appsView').addEventListener('keydown', e=>{ if(e.key==='Enter' && e.target.classList && e.target.classList.contains('b-card')){ appsUI.sel = e.target.dataset.app; renderApps(); } });
 $('#appsView').addEventListener('input', e=>{
   const k = e.target.dataset.af; if(!k) return;
   const a = store.apps.find(x=>x.id===appsUI.sel); if(!a) return;
@@ -3402,13 +3485,25 @@ $('#appsView').addEventListener('change', e=>{
   a[k] = e.target.value;
   // tekstvelden niet opnieuw opbouwen bij het verlaten van het veld: anders mist een klik op een knop zijn doel
   if(['company','role','contact','url','notes'].includes(k)){ persist(); renderApps(true); return; }
-  if(k==='status' && a.status==='Verstuurd'){
-    if(!a.date) a.date = todayISO();
-    if(!a.followUp) a.followUp = addDaysISO(a.date > todayISO() ? a.date : todayISO(), 7);
-    if(!a.sent){ if(snapshot(a)) toast('Verstuurd. Je CV en brief zijn vastgelegd, en opvolgen staat over een week.'); }
-  }
+  if(k==='status') afterStatus(a);
   persist(); renderApps();
 });
+// wat er gebeurt als een sollicitatie Verstuurd wordt: datum, opvolgen en een momentopname van je CV en brief
+function afterStatus(a){
+  if(a.status!=='Verstuurd') return;
+  if(!a.date) a.date = todayISO();
+  if(!a.followUp) a.followUp = addDaysISO(a.date > todayISO() ? a.date : todayISO(), 7);
+  if(!a.sent){ if(snapshot(a)) toast('Verstuurd. Je CV en brief zijn vastgelegd, en opvolgen staat over een week.'); }
+}
+// bord: slepen naar een andere kolom
+let bDrag = null;
+$('#appsView').addEventListener('dragstart', e=>{ const c = e.target.closest && e.target.closest('.b-card'); if(!c) return; bDrag = c.dataset.app; c.classList.add('dragging'); try{ e.dataTransfer.setData('text/plain', bDrag); e.dataTransfer.effectAllowed='move'; }catch(x){} });
+$('#appsView').addEventListener('dragend', ()=>{ bDrag = null; document.querySelectorAll('.b-card.dragging,.b-col.over').forEach(x=>x.classList.remove('dragging','over')); });
+$('#appsView').addEventListener('dragover', e=>{ const col = e.target.closest && e.target.closest('.b-col'); if(!col || !bDrag) return; e.preventDefault(); document.querySelectorAll('.b-col.over').forEach(x=>{ if(x!==col) x.classList.remove('over'); }); col.classList.add('over'); });
+$('#appsView').addEventListener('drop', e=>{ const col = e.target.closest && e.target.closest('.b-col'); if(!col || !bDrag) return; e.preventDefault();
+  const a = store.apps.find(x=>x.id===bDrag); const st = col.dataset.bcol; bDrag = null;
+  if(!a || a.status===st){ renderApps(true); return; }
+  a.status = st; afterStatus(a); appsUI.sel = a.id; persist(); renderApps(); });
 function viewSent(a){
   const s = a.sent; if(!s) return;
   registerCustomFonts(s.cv.design);
@@ -3457,25 +3552,32 @@ document.querySelector('.topbar').addEventListener('click', e=>{
   const b = e.target.closest('[data-top]'); if(!b) return;
   const a = b.dataset.top;
   if(a==='docs') openDocMenu(b);
-  if(a==='apps'){ if($('#appsView').hidden) openApps(); else closeApps(); }
+  if(a==='apps' && $('#appsView').hidden) openApps();
+  if(a==='cv' && !$('#appsView').hidden) closeApps();
   if(a==='help') openPopover(b,[
     {id:'welcome',label:'Welkom en uitleg',about:'Hoe het CV Ateljee werkt, in drie stappen'},
     {id:'pdf',label:'Tips voor een goede PDF',about:'Opslaan als PDF, met klikbare links'},
     {id:'keys',label:'Sneltoetsen'},
     {id:'data',label:'Waar staan mijn gegevens?',about:'Alleen in deze browser, en hoe je een reservekopie maakt'},
-    {id:'about',label:'Over CV Ateljee',about:'Versie '+APP_VERSION+', en wanneer je laatste reservekopie was'},
+    {id:'news',label:'Wat is er nieuw',about:'De nieuwigheden per versie, op GitHub'},
+    {id:'issue',label:'Een fout of een idee melden',about:'Via GitHub (je hebt er een gratis account voor nodig)'},
+    {id:'about',label:'Over CV Ateljee',about:'Versie '+APP_VERSION+', opslag en je laatste reservekopie'},
     {sep:1},
     {id:'theme',label:'Weergave: '+THEMES.find(x=>x[0]===themeGet())[1],about:'Licht of donker. Je CV en brief blijven wit.',more:true,plain:true}
   ], it=>{
     if(it.id==='theme') openPopover(b, [{head:'Weergave van de tool'}].concat(THEMES.map(([v,l])=>({id:v,label:l,cur:v===themeGet(),plain:true}))).concat([{sep:1},{note:'Alleen de tool wordt donker. Je CV en je brief blijven wit, zoals ze op papier komen.'}]), x=>{ themeSet(x.id); });
     if(it.id==='welcome') openWelcome(false);
+    if(it.id==='news') window.open(GH+'/blob/main/CHANGELOG.md','_blank','noopener');
+    if(it.id==='issue') window.open(GH+'/issues/new','_blank','noopener');
     if(it.id==='about'){ const u = uiGet();
       openInfo('Over CV Ateljee', '<p style="margin:0 0 12px"><span class="brand-mark" style="display:inline-grid;vertical-align:middle;margin-right:8px" aria-hidden="true">CVA</span><b>CV Ateljee</b>, versie '+APP_VERSION+' ('+APP_DATE+')</p>'+
         '<ul class="info-list">'+
         '<li><span>Een gratis CV-maker in één bestand. Geen account, geen abonnement, geen server.</span></li>'+
         '<li><span>Je gegevens blijven in deze browser, op deze computer. Er wordt niets online bewaard of doorgestuurd.</span></li>'+
         '<li><span>Laatste reservekopie: <b>'+(u.lastBackup ? new Date(u.lastBackup).toLocaleDateString('nl-BE',{day:'numeric',month:'long',year:'numeric'})+' ('+bkAgo(u.lastBackup)+')' : 'nog geen')+'</b>. <button type="button" class="linkish" data-bk-now>Nu een reservekopie maken</button></span></li>'+
-        '<li><span>Gemaakt door Nerud De Zutter, met Claude.</span></li></ul>'); }
+        (()=>{ const u = storeUse(), pct = Math.min(100, Math.round(u/(5*1048576)*100)); return '<li><span style="flex:1">Opslag in deze browser: <b>'+fmtMB(u)+'</b> van ongeveer 5 MB'+(pct>=80?' <b style="color:var(--ui-danger)">(bijna vol)</b>':'')+'.<span class="mem-bar"><i style="width:'+Math.max(2,pct)+'%"'+(pct>=80?' class="full"':'')+'></i></span><small class="hint" style="display:block;margin:4px 0 0">Foto\u2019s, artwork en eigen lettertypes nemen de meeste plaats in.</small></span></li>'; })()+
+        '<li><span><a href="'+GH+'" target="_blank" rel="noopener">CV Ateljee op GitHub</a> · <a href="'+GH+'/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Wat is er nieuw</a></span></li>'+
+        '<li><span>Gemaakt door Claude, met Nerud De Zutter.</span></li></ul>'); }
     if(it.id==='pdf') openModal('printModal');
     if(it.id==='keys') openInfo('Sneltoetsen','<ul class="info-list">'+
       [['Ctrl + Z','Ongedaan maken'],['Ctrl + Y','Opnieuw'],['Ctrl + P','Download PDF'],['Esc','Een venster of menu sluiten'],['Tab','Naar het volgende vak of de volgende knop']].map(([k,t])=>'<li><span class="k">'+k.split(' + ').map(x=>'<kbd>'+x+'</kbd>').join(' + ')+'</span><span>'+t+'</span></li>').join('')+
@@ -3518,7 +3620,10 @@ function themeSet(t, quiet){ try{ const u = JSON.parse(localStorage.getItem(UIKE
 $('#themeTg').addEventListener('click', ()=>{ const dark = document.documentElement.getAttribute('data-theme')==='dark'; themeSet(dark ? 'licht' : 'donker', true); });
 themeSync();
 if(darkMQ){ try{ darkMQ.addEventListener('change', themeApply); }catch(e){ try{ darkMQ.addListener(themeApply); }catch(e2){} } }
-const APP_VERSION = 20, APP_DATE = '7 november 2026';
+const APP_VERSION = '21.2', APP_DATE = '7 november 2026';
+const GH = 'https://github.com/NarudeSandstorm/cv-ateljee';
+function storeUse(){ let n = 0; try{ for(let i=0;i<localStorage.length;i++){ const k = localStorage.key(i); n += k.length + (localStorage.getItem(k)||'').length; } }catch(e){} return n*2; }
+function fmtMB(b){ return b < 1048576 ? Math.max(1, Math.round(b/1024))+' KB' : (b/1048576).toLocaleString('nl-BE',{maximumFractionDigits:1, minimumFractionDigits:1})+' MB'; }
 function openInfo(title, html){ $('#infoTitle').textContent = title; $('#infoBody').innerHTML = html; openModal('infoModal'); }
 const LANGS = [['nl','Nederlands'],['en','English'],['fr','Français']];
 function openDocMenu(anchor){
@@ -3549,6 +3654,7 @@ $('#gallery').addEventListener('click', e=>{
   closeModal('galleryModal'); setDesign('template', b.dataset.gal);
 });
 document.addEventListener('keydown', e=>{
+  if(e.key==='Escape' && !$('#appsView').hidden && !document.querySelector('.modal.open') && !pop && !/^(INPUT|TEXTAREA|SELECT)$/.test((document.activeElement||{}).tagName||'')){ closeApps(); return; }
   if(e.key==='Escape'){ if($('#welcomeModal').classList.contains('open')) markWelcomed(); document.querySelectorAll('.modal.open').forEach(m=>m.classList.remove('open')); closePopover(); return; }
   const mod = e.ctrlKey || e.metaKey; if(!mod) return;
   const inText = /^(INPUT|TEXTAREA|SELECT)$/.test((document.activeElement||{}).tagName||'') && !/^(checkbox|range|color)$/.test(document.activeElement.type);
