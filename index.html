@@ -8,8 +8,8 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="CV Ateljee – gratis CV-maker">
 <meta property="og:description" content="Maak een verzorgd CV en een motivatiebrief die bij elkaar passen. Geen account, je gegevens blijven op je eigen computer.">
-<meta property="og:url" content="https://narudesandstorm.github.io/cv-ateljee/">
-<meta property="og:image" content="https://narudesandstorm.github.io/cv-ateljee/preview.png">
+<meta property="og:url" content="https://neruddz.github.io/cv-ateljee/">
+<meta property="og:image" content="https://neruddz.github.io/cv-ateljee/preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="nl_BE">
@@ -5857,8 +5857,8 @@ function themeSet(t, quiet){ try{ const u = JSON.parse(localStorage.getItem(UIKE
 $('#themeTg').addEventListener('click', ()=>{ const dark = document.documentElement.getAttribute('data-theme')==='dark'; themeSet(dark ? 'licht' : 'donker', true); });
 themeSync();
 if(darkMQ){ try{ darkMQ.addEventListener('change', themeApply); }catch(e){ try{ darkMQ.addListener(themeApply); }catch(e2){} } }
-const APP_VERSION = '24.1', APP_DATE = '2026-11-08';
-const GH = 'https://github.com/NarudeSandstorm/cv-ateljee';
+const APP_VERSION = '24.2', APP_DATE = '2026-11-08';
+const GH = 'https://github.com/neruddz/cv-ateljee';
 function storeUse(){ let n = 0; try{ for(let i=0;i<localStorage.length;i++){ const k = localStorage.key(i); n += k.length + (localStorage.getItem(k)||'').length; } }catch(e){} return n*2; }
 function fmtMB(b){ return b < 1048576 ? Math.max(1, Math.round(b/1024))+' KB' : (b/1048576).toLocaleString(toolLocale(),{maximumFractionDigits:1, minimumFractionDigits:1})+' MB'; }
 function openInfo(title, html){ $('#infoTitle').textContent = title; $('#infoBody').innerHTML = html; openModal('infoModal'); }

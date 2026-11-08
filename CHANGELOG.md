@@ -1,5 +1,10 @@
 # Wat is er nieuw in CV Ateljee
 
+## Versie 24.2 – 8 november 2026
+
+**Verbeterd**
+- CV Ateljee staat op een nieuw adres: https://neruddz.github.io/cv-ateljee/
+
 ## Versie 24.1 – 8 november 2026
 
 **Verbeterd**
