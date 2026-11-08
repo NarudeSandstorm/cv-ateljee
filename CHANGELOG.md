@@ -1,5 +1,57 @@
 # Wat is er nieuw in CV Ateljee
 
+## Versie 24.1 – 8 november 2026
+
+**Verbeterd**
+- Zet je de tool in een andere taal terwijl je CV nog leeg is, dan gaat je CV mee: titels, datums, het grijze voorbeeld en de basisbrief.
+- Staat er al iets in je CV, dan blijft het in zijn taal. Je krijgt één keer een knop om de titels, datums en niveaus om te zetten. Je eigen tekst verandert nooit.
+
+## Versie 24 – 8 november 2026
+
+**Nieuw**
+- **Eerste stappen:** wie CV Ateljee voor het eerst opent, krijgt een lijstje met vijf stappen: naam en contact, profiel, werkervaring, opleiding en je PDF. Klik op een stap en het juiste vak gaat open.
+- **Grijs voorbeeld:** zolang je begint, toont je CV grijze voorbeeldtekst in de lege delen. Zo zie je meteen hoe het eruit zal zien. Vul je iets in, dan verdwijnt het grijs. Het komt nooit in je PDF.
+
+**Verbeterd**
+- **Ontwerp is eenvoudiger:** bovenaan staan de snelle stijlen, het sjabloon, de kleuren en de lettertypes. Al de rest vind je onder **Alles zelf aanpassen**, met de tabbladen Indeling, Details en Artwork. Het zoekvak zoekt nog altijd overal.
+- **Mijn ontwerpen** heeft een eigen plaats onder Alles zelf aanpassen.
+
+## Versie 23.2 – 8 november 2026
+
+**Nieuw**
+- **Knopjes voor vet en cursief:** selecteer tekst en klik op **B** of *I* in het balkje boven het vak. Ctrl+B en Ctrl+I werken ook.
+- **Zelf kiezen waar een lang woord splitst:** klik op **Afbreekpunt** of typ `--`, bijvoorbeeld `Kunst--humaniora`. Past het woord, dan zie je niets. Past het niet, dan splitst het daar: *Kunst-* / *humaniora*.
+
+## Versie 23.1 – 8 november 2026
+
+**Verbeterd**
+- Op de gsm blijft de bovenbalk op twee regels, ook met een lange CV-naam of een sollicitatie om op te volgen.
+- Menu's blijven altijd binnen het scherm, ook in het Engels en Frans.
+- In het Frans passen de knoppen onder **Design** beter op een smalle gsm.
+
+**Veiligheid**
+- **Download voor Excel:** een cel die met = of @ begint, wordt in Excel niet meer als formule uitgevoerd.
+
+## Versie 23 – 8 november 2026
+
+**Nieuw**
+- **CV Ateljee in het Frans.** Kies *Français* in het welkomstvenster of via **Hulp › Taal · Language**. *CV Ateljee est maintenant aussi disponible en français.*
+- Wie in het Frans begint, krijgt een Frans voorbeeld-CV en een Franse basisbrief.
+
+**Verbeterd**
+- Na **Brief bewerken** vanuit Sollicitaties staat bovenaan weer **CV** aangeduid.
+
+## Versie 22 – 8 november 2026
+
+**Nieuw**
+- **CV Ateljee in het Engels.** Kies je taal bovenaan in het welkomstvenster, of later via **Hulp › Taal · Language**. *CV Ateljee is now also available in English.*
+- De taal van de tool staat los van de taal van je CV: je kunt een Nederlands CV maken met de tool in het Engels, en omgekeerd.
+- Nieuwe gebruikers krijgen de taal van hun browser. Wie in het Engels begint, krijgt ook een Engels voorbeeld-CV en een Engelse basisbrief.
+
+**Verbeterd**
+- Bestaande gebruikers merken niets: de tool blijft Nederlands en je CV's, brieven en sollicitaties blijven zoals ze zijn.
+- Een leeg CV toont "Je naam" nu in de taal van je CV.
+
 ## Versie 21.2 – 7 november 2026
 
 **Nieuw**
