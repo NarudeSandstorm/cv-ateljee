@@ -1,5 +1,18 @@
 # Wat is er nieuw in CV Ateljee
 
+## Versie 26 – 9 november 2026
+
+**Nieuw**
+- **Hulp bij je PDF:** de tool herkent je browser (Chrome, Edge, Safari, Firefox, iPhone of Android) en toont met een schets waar je klikt in het afdrukvenster.
+- Na het afdrukken vraagt de tool of je PDF gelukt is. Ging er iets mis, dan zie je de drie meest voorkomende fouten en hoe je ze oplost. Lukte het, dan krijg je voortaan een korte versie.
+
+## Versie 25 – 9 november 2026
+
+**Nieuw**
+- **Oud CV inlezen (PDF):** heb je al een CV, kies dan *Ik heb al een CV (PDF)* in het welkomstvenster of *Bestand › Oud CV inlezen (PDF)*. Je oude CV staat dan naast je nieuwe, onder **Oud CV**. Klik links in een vak, kies rechts een regel of selecteer tekst, en klik op **In het vak zetten**.
+- Je naam, e-mail, telefoon, LinkedIn en website vult de tool zelf in, alleen in vakken die nog leeg zijn.
+- Je PDF verlaat je computer niet en de tekst van je oude CV wordt niet bewaard. Je hebt wel internet nodig om hem te lezen. Gescande PDF's werken niet.
+
 ## Versie 24.2 – 8 november 2026
 
 **Verbeterd**

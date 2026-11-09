@@ -673,6 +673,64 @@ html[data-theme="dark"] .tb-badge{background:#e05c5c}
 .toast.act{pointer-events:auto}
 .toast .toast-btn{margin-left:10px;border:0;border-radius:6px;background:#fff;color:#1d2330;font:inherit;font-weight:600;padding:4px 10px;cursor:pointer}
 .toast .toast-btn:hover{background:#e6ebf5}
+.preview-wrap.old-on > :is(.preview-scaler,.page-info,.ed-hint,.ed-bar,.check-btn),.preview-wrap.old-on .pv-bar > :is(.pv-pages,.pv-zoom){display:none!important}
+.old-cv{max-width:780px;margin:0 auto 48px}
+.old-cv[hidden]{display:none}
+.oc-bar{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;background:var(--ui-card);border:1px solid var(--ui-line);border-radius:12px;padding:10px 10px 10px 14px;margin-bottom:12px;box-shadow:0 2px 10px rgba(16,24,40,.08)}
+.oc-file{flex:1;min-width:140px;display:flex;flex-direction:column;line-height:1.3}
+.oc-file b{font-size:14.5px;color:var(--ui-text)}
+.oc-file span{color:var(--ui-muted);font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#ocPut{max-width:min(420px,100%);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#ocPut:disabled{opacity:.5;cursor:default}
+.oc-how{flex-basis:100%;margin:0;font-size:12.5px;color:var(--ui-muted)}
+.oc-paper{background:var(--ui-card);border:1px solid var(--ui-line2);border-radius:12px;padding:22px 26px;font-size:14px;line-height:1.55;color:var(--ui-text);-webkit-user-select:text;user-select:text}
+.oc-l{padding:1px 6px;margin:0 -6px;border-radius:5px;cursor:text}
+.oc-l:hover{background:var(--ui-sunk)}
+.oc-big{font-weight:700;font-size:15.5px}
+.oc-sp{display:inline-block;width:1.8em}
+.oc-gap{height:12px}
+.oc-page{margin:18px 0 6px;font-size:11.5px;font-weight:600;color:var(--ui-muted);text-transform:uppercase;letter-spacing:.06em}
+.oc-page:first-child{margin-top:0}
+.oc-none{color:var(--ui-muted);margin:0}
+.oc-h{font-weight:650;letter-spacing:.02em}
+@media (max-width:600px){.oc-bar [data-oc="close"]{order:2}#ocPut{order:3;flex-basis:100%;max-width:none}.oc-how{order:4}.oc-paper{padding:16px 16px}}
+.pg-br{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin:4px 0 14px;font-size:13.5px;color:var(--ui-sub)}
+.pg-br select{font:inherit;font-weight:600;color:var(--ui-text);background:var(--ui-card);border:1px solid var(--ui-line);border-radius:8px;padding:5px 8px}
+.pg-br .pg-other{color:var(--ui-muted);font-size:12.5px}
+.pg-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:18px;align-items:center}
+@media (max-width:640px){.pg-grid{grid-template-columns:1fr}}
+.pdf-sketch{width:100%;height:auto;display:block}
+.pg-steps{margin:0;padding-left:0;list-style:none;counter-reset:pg;line-height:1.5;font-size:14px}
+.pg-steps li{counter-increment:pg;position:relative;padding-left:34px;margin-bottom:12px}
+.pg-steps li::before{content:counter(pg);position:absolute;left:0;top:-1px;width:22px;height:22px;border-radius:50%;background:#dc2626;color:#fff;font-weight:700;font-size:12.5px;display:grid;place-items:center}
+.br-l{font-weight:700;white-space:nowrap}
+.pg-short{font-size:15px;margin:6px 0 4px}
+.pg-fix{margin:0;padding-left:20px;line-height:1.5}
+.pg-fix li{margin-bottom:10px}
+.pg-fix li > b{display:block}
+.pg-fix li > span{color:var(--ui-sub)}
+.pdf-sketch .sk-frame{fill:var(--ui-card);stroke:var(--ui-line);stroke-width:1.5}
+.pdf-sketch .sk-bg{fill:var(--ui-sunk)}
+.pdf-sketch .sk-panel{fill:var(--ui-card);stroke:var(--ui-line);stroke-width:1.2}
+.pdf-sketch .sk-menu{fill:var(--ui-card);stroke:var(--ui-line);stroke-width:1.2;filter:drop-shadow(0 2px 4px rgba(0,0,0,.18))}
+.pdf-sketch .sk-page{fill:#fff;stroke:#d5dae3;stroke-width:1}
+.pdf-sketch .sk-side{fill:#dfe5ee}
+.pdf-sketch .sk-line{fill:#c9d0dc}
+.pdf-sketch text{font-family:inherit;font-size:12.5px}
+.pdf-sketch .sk-t{fill:var(--ui-text)}
+.pdf-sketch .sk-tb{fill:var(--ui-text);font-weight:600}
+.pdf-sketch .sk-h{fill:var(--ui-text);font-weight:700;font-size:15px}
+.pdf-sketch .sk-m{fill:var(--ui-muted);font-size:11.5px}
+.pdf-sketch .sk-a{fill:var(--ui-brand);font-weight:600}
+.pdf-sketch .sk-go{fill:var(--ui-brand)}
+.pdf-sketch .sk-gt{fill:#fff;font-weight:600}
+.pdf-sketch .sk-on{fill:var(--ui-brand)}
+.pdf-sketch .sk-off{fill:var(--ui-card);stroke:var(--ui-muted);stroke-width:1.2}
+.pdf-sketch .sk-check{fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pdf-sketch .sk-icon{fill:none;stroke:var(--ui-brand);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pdf-sketch .sk-ring{fill:none;stroke:#dc2626;stroke-width:2.5}
+.pdf-sketch .sk-nb{fill:#dc2626}
+.pdf-sketch .sk-nt{fill:#fff;font-weight:700;font-size:12px}
 .wel-lang{float:right;margin:0 0 8px 16px}
 .wel-lang .seg button{padding:6px 12px}
 /* gsm: de CV-kiezer krimpt (naam met …) in plaats van de knoppen naar een derde regel te duwen; nodig voor lange namen, het bolletje bij Sollicitaties en langere vertalingen */
@@ -1113,12 +1171,13 @@ html[data-theme="dark"] .tb-badge{background:#e05c5c}
     <div class="panel" id="panelCheck" hidden></div>
   </aside>
   <section class="preview-wrap" id="previewWrap">
-    <div class="pv-bar"><div class="seg view-toggle" id="viewToggle"><button data-view="cv" class="active">CV</button><button data-view="letter">Motivatiebrief</button></div>
+    <div class="pv-bar"><div class="seg view-toggle" id="viewToggle"><button data-view="cv" class="active">CV</button><button data-view="letter">Motivatiebrief</button><button data-view="old" hidden title="Je oude CV, om tekst over te nemen">Oud CV</button></div>
       <span class="pv-pages" id="pageCount" title="De rode lijn op het voorbeeld toont ongeveer waar een nieuwe pagina begint"></span>
       <div class="seg pv-zoom" id="zoomSeg" role="group" aria-label="Zoom"><button data-zoom="fit" class="active" title="Het hele blad past in het venster">Passend</button><button data-zoom="1">100%</button><button data-zoom="1.5">150%</button></div></div>
     <button class="check-btn" id="btnCheck" type="button" title="Je CV laten nakijken op veelvoorkomende fouten">CV nakijken</button>
     <p class="ed-hint" id="edHint">Tip: klik op iets in je CV om het meteen te bewerken.</p>
     <div class="ed-bar" id="edBar" hidden><button type="button" data-edgo="text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg>Bewerken</button><button type="button" data-edgo="design"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2a10 10 0 000 20c.9 0 1.6-.7 1.6-1.6 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.7-1.6 1.6-1.6H16a6 6 0 006-6c0-4.9-4.5-8.6-10-8.6z"/></svg>Opmaak</button></div>
+    <div class="old-cv" id="oldCv" hidden></div>
     <div class="preview-scaler" id="scaler"><div id="cv" class="page"></div></div>
     <div class="page-info" id="pageInfo"></div>
   </section>
@@ -1155,6 +1214,7 @@ html[data-theme="dark"] .tb-badge{background:#e05c5c}
     <p class="hint" style="margin-top:12px">Later handig: in <b>Brief</b> schrijf je een basisbrief, en in <b>Sollicitaties</b> houd je bij waar je solliciteerde, met een eigen brief per vacature.</p>
     <div class="modal-actions">
       <button class="btn-ghost" id="welSample" style="margin-right:auto">Voorbeeld bekijken</button>
+      <button class="btn-ghost" id="welPdf">Ik heb al een CV (PDF)</button>
       <button class="btn-primary" id="welStart">Begin met mijn eigen CV</button>
     </div>
   </div>
@@ -1212,22 +1272,10 @@ html[data-theme="dark"] .tb-badge{background:#e05c5c}
 <input type="file" id="sigFile" accept="image/*" hidden>
 <input type="file" id="artFile" accept="image/*" hidden>
 <div class="modal" id="printModal">
-  <div class="modal-box" style="max-width:560px">
-    <h2>Je CV als PDF bewaren</h2>
-    <p class="sub">Je browser opent zo het afdrukvenster. Zo krijg je de netste PDF:</p>
-    <ol class="tips">
-      <li>Kies bij <b>Bestemming</b> voor <b>Opslaan als PDF</b>. Niet <b>Microsoft Print to PDF</b> of een andere PDF-printer: dan zijn je links niet klikbaar.</li>
-      <li>Papierformaat <b>A4</b>, marges op <b>Standaard</b>.</li>
-      <li>Open <b>Meer instellingen</b> en zet <b>Kop- en voetteksten</b> uit.</li>
-      <li>Mis je kleuren? Zet dan <b>Achtergrondafbeeldingen</b> aan.</li>
-    </ol>
-    <p class="hint" style="margin-top:14px">Werkt het best in Chrome of Edge. De tekst blijft selecteerbaar en je e-mail, telefoon en links zijn klikbaar.</p>
-    <div class="modal-actions">
-      <label class="chk" style="margin:0 auto 0 0"><input type="checkbox" id="printSkip"> Niet meer tonen</label>
-      <button class="btn-ghost" data-close>Annuleren</button>
-      <button class="btn-primary" id="printGo">Afdrukken</button>
-    </div>
-  </div>
+  <div class="modal-box" style="max-width:760px"><div id="printBody" data-notr></div></div>
+</div>
+<div class="modal" id="pdfAskModal">
+  <div class="modal-box" style="max-width:540px"><div id="pdfAskBody" data-notr></div></div>
 </div>
 
 <div class="modal" id="textModal">
@@ -1257,7 +1305,8 @@ html[data-theme="dark"] .tb-badge{background:#e05c5c}
   </div>
 </div>
 
-<input type="file" id="importFile" accept=".json,application/json" hidden>
+<input type="file" id="importFile" accept=".json,application/json,.pdf,application/pdf" hidden>
+<input type="file" id="oldFile" accept=".pdf,application/pdf" hidden>
 <input type="file" id="photoFile" accept="image/*" hidden>
 <input type="file" id="fontFile" accept=".ttf,.otf,.woff,.woff2,font/ttf,font/otf,font/woff,font/woff2" hidden>
 <div class="bk-note" id="bkNote" role="status" hidden>
@@ -2186,7 +2235,69 @@ const I18N = {en:{
 "Je CV staat nog in het Engels. Je eigen tekst blijft zoals hij is.": "Your CV is still in English. Your own text stays as it is.",
 "Je CV staat nog in het Frans. Je eigen tekst blijft zoals hij is.": "Your CV is still in French. Your own text stays as it is.",
 "CV in het Engels": "CV in English",
-"Klaar. Je eigen tekst bleef zoals hij was. Ctrl+Z zet het terug.": "Done. Your own text stayed as it was. Ctrl+Z undoes it."
+"Klaar. Je eigen tekst bleef zoals hij was. Ctrl+Z zet het terug.": "Done. Your own text stayed as it was. Ctrl+Z undoes it.",
+"Oud CV": "Old CV",
+"Je oude CV, om tekst over te nemen": "Your old CV, to copy text from",
+"Ik heb al een CV (PDF)": "I already have a CV (PDF)",
+"Oud CV inlezen (PDF)": "Open old CV (PDF)",
+"Je oude CV naast je nieuwe, om tekst over te nemen": "Your old CV next to your new one, to copy text over",
+"Je oude CV": "Your old CV",
+"In het vak zetten": "Put in field",
+"In het vak zetten: {veld}": "Put in: {veld}",
+"Oud CV sluiten": "Close old CV",
+"In deze PDF staat geen tekst. Het is waarschijnlijk een scan of een afbeelding. Typ je gegevens dan over.": "This PDF contains no text. It's probably a scan or an image. Please type your details instead.",
+"Pagina {n}": "Page {n}",
+"Klik links in het vak waar de tekst moet komen. Selecteer dan hier de tekst, of klik op een regel.": "Click the field on the left where the text should go. Then select the text here, or click a line.",
+"Selecteer hier de tekst, of klik op een regel.": "Select the text here, or click a line.",
+"Klik op de knop om de tekst over te nemen. Je kunt ook kopiëren en plakken.": "Click the button to copy the text over. You can also copy and paste.",
+"Overgenomen. Ctrl+Z maakt het ongedaan.": "Copied over. Ctrl+Z undoes it.",
+"Kies een PDF-bestand.": "Choose a PDF file.",
+"Dit bestand is te groot (meer dan 20 MB).": "This file is too large (more than 20 MB).",
+"Je oude CV wordt gelezen…": "Reading your old CV…",
+"Deze PDF is beveiligd met een wachtwoord. Bewaar hem eerst zonder wachtwoord.": "This PDF is password-protected. Save it without a password first.",
+"De PDF-lezer kon niet laden. Je hebt hiervoor internet nodig.": "The PDF reader couldn't load. You need an internet connection for this.",
+"Deze PDF kon niet gelezen worden.": "This PDF couldn't be read.",
+"Uit je oude CV ingevuld: {lijst}. Ctrl+Z maakt het ongedaan.": "Filled in from your old CV: {lijst}. Ctrl+Z undoes it.",
+"Je oude CV staat rechts. Neem over wat je nodig hebt.": "Your old CV is on the right. Copy over what you need.",
+"Oud CV gesloten. De tekst is niet bewaard.": "Old CV closed. The text was not saved.",
+"naam": "name",
+"e-mail": "email",
+"telefoon": "phone",
+"website": "website",
+"iPhone of iPad": "iPhone or iPad",
+"Je browser:": "Your browser:",
+"Andere browser?": "Different browser?",
+"Andere browser? Kies hem hier.": "Different browser? Choose it here.",
+"Schets van het afdrukvenster": "Sketch of the print window",
+"Je brief als PDF bewaren": "Save your letter as a PDF",
+"Zie je de opties niet? Klik op {a}. Vink {b} aan en {c} uit.": "Can't see the options? Click {a}. Tick {b} and untick {c}.",
+"Klik linksonder op {a} en kies {b}.": "Click {a} at the bottom left and choose {b}.",
+"Tik in het afdrukvenster rechtsboven op het deel-icoon.": "In the print window, tap the share icon at the top right.",
+"Kies {a} en bewaar de PDF.": "Choose {a} and save the PDF.",
+"Tik bovenaan op de printer en kies {a}.": "Tap the printer at the top and choose {a}.",
+"Tik op de ronde knop {a} en bewaar de PDF.": "Tap the round {a} button and save the PDF.",
+"Kies bij {a} voor {b}.": "Under {a}, choose {b}.",
+"Open {a}. Zet {b} uit en {c} aan.": "Open {a}. Turn {b} off and {c} on.",
+"Klik op {a} en kies waar je de PDF bewaart.": "Click {a} and choose where to save the PDF.",
+"Toon de volledige uitleg": "Show the full explanation",
+"Kies niet Microsoft Print to PDF of een andere PDF-printer: dan zijn je links niet klikbaar.": "Don't choose Microsoft Print to PDF or another PDF printer: your links won't be clickable.",
+"De woorden kunnen een beetje anders zijn, afhankelijk van de taal en de versie van je browser.": "The wording may differ slightly, depending on the language and version of your browser.",
+"Is je PDF gelukt?": "Did your PDF work?",
+"Open je PDF even en kijk of alles goed staat.": "Open your PDF for a moment and check that everything looks right.",
+"Ik kijk later": "I'll check later",
+"Nee, er ging iets mis": "No, something went wrong",
+"Ja, gelukt": "Yes, it worked",
+"Je links werken niet in de PDF.": "Your links don't work in the PDF.",
+"Je koos een PDF-printer, zoals Microsoft Print to PDF. Kies {a}.": "You chose a PDF printer, such as Microsoft Print to PDF. Choose {a}.",
+"Er staat een datum, een titel of een webadres boven of onder op de pagina.": "There's a date, a title or a web address at the top or bottom of the page.",
+"Zet {a} uit.": "Turn {a} off.",
+"Je kleuren, de zijbalk of je foto zijn weg.": "Your colours, the sidebar or your photo are missing.",
+"Zet {a} aan.": "Turn {a} on.",
+"Wat ging er mis?": "What went wrong?",
+"Dit zijn de drie meest voorkomende fouten:": "These are the three most common mistakes:",
+"Iets anders? Meld het via Hulp, Een fout of een idee melden.": "Something else? Let us know via Help, Report a bug or an idea.",
+"Opnieuw proberen": "Try again",
+"Fijn! Volgende keer krijg je een kortere uitleg.": "Great! Next time you'll get a shorter explanation."
 }, fr:{
 "CV": "CV",
 "Sollicitaties": "Candidatures",
@@ -3079,7 +3190,69 @@ const I18N = {en:{
 "Je CV staat nog in het Engels. Je eigen tekst blijft zoals hij is.": "Votre CV est encore en anglais. Votre propre texte reste tel quel.",
 "Je CV staat nog in het Frans. Je eigen tekst blijft zoals hij is.": "Votre CV est encore en français. Votre propre texte reste tel quel.",
 "CV in het Frans": "CV en français",
-"Klaar. Je eigen tekst bleef zoals hij was. Ctrl+Z zet het terug.": "C’est fait. Votre propre texte n’a pas changé. Ctrl+Z annule."
+"Klaar. Je eigen tekst bleef zoals hij was. Ctrl+Z zet het terug.": "C’est fait. Votre propre texte n’a pas changé. Ctrl+Z annule.",
+"Oud CV": "Ancien CV",
+"Je oude CV, om tekst over te nemen": "Votre ancien CV, pour en reprendre le texte",
+"Ik heb al een CV (PDF)": "J’ai déjà un CV (PDF)",
+"Oud CV inlezen (PDF)": "Ouvrir un ancien CV (PDF)",
+"Je oude CV naast je nieuwe, om tekst over te nemen": "Votre ancien CV à côté du nouveau, pour reprendre du texte",
+"Je oude CV": "Votre ancien CV",
+"In het vak zetten": "Mettre dans le champ",
+"In het vak zetten: {veld}": "Mettre dans : {veld}",
+"Oud CV sluiten": "Fermer l’ancien CV",
+"In deze PDF staat geen tekst. Het is waarschijnlijk een scan of een afbeelding. Typ je gegevens dan over.": "Ce PDF ne contient pas de texte. C’est sans doute un scan ou une image. Recopiez alors vos informations.",
+"Pagina {n}": "Page {n}",
+"Klik links in het vak waar de tekst moet komen. Selecteer dan hier de tekst, of klik op een regel.": "Cliquez à gauche dans le champ où le texte doit aller. Sélectionnez ensuite le texte ici, ou cliquez sur une ligne.",
+"Selecteer hier de tekst, of klik op een regel.": "Sélectionnez le texte ici, ou cliquez sur une ligne.",
+"Klik op de knop om de tekst over te nemen. Je kunt ook kopiëren en plakken.": "Cliquez sur le bouton pour reprendre le texte. Vous pouvez aussi copier-coller.",
+"Overgenomen. Ctrl+Z maakt het ongedaan.": "Repris. Ctrl+Z annule.",
+"Kies een PDF-bestand.": "Choisissez un fichier PDF.",
+"Dit bestand is te groot (meer dan 20 MB).": "Ce fichier est trop volumineux (plus de 20 Mo).",
+"Je oude CV wordt gelezen…": "Lecture de votre ancien CV…",
+"Deze PDF is beveiligd met een wachtwoord. Bewaar hem eerst zonder wachtwoord.": "Ce PDF est protégé par un mot de passe. Enregistrez-le d’abord sans mot de passe.",
+"De PDF-lezer kon niet laden. Je hebt hiervoor internet nodig.": "Le lecteur PDF n’a pas pu se charger. Une connexion Internet est nécessaire.",
+"Deze PDF kon niet gelezen worden.": "Ce PDF n’a pas pu être lu.",
+"Uit je oude CV ingevuld: {lijst}. Ctrl+Z maakt het ongedaan.": "Repris de votre ancien CV : {lijst}. Ctrl+Z annule.",
+"Je oude CV staat rechts. Neem over wat je nodig hebt.": "Votre ancien CV est à droite. Reprenez ce dont vous avez besoin.",
+"Oud CV gesloten. De tekst is niet bewaard.": "Ancien CV fermé. Le texte n’a pas été conservé.",
+"naam": "nom",
+"e-mail": "e-mail",
+"telefoon": "téléphone",
+"website": "site web",
+"iPhone of iPad": "iPhone ou iPad",
+"Je browser:": "Votre navigateur :",
+"Andere browser?": "Autre navigateur ?",
+"Andere browser? Kies hem hier.": "Autre navigateur ? Choisissez-le ici.",
+"Schets van het afdrukvenster": "Schéma de la fenêtre d’impression",
+"Je brief als PDF bewaren": "Enregistrer votre lettre en PDF",
+"Zie je de opties niet? Klik op {a}. Vink {b} aan en {c} uit.": "Vous ne voyez pas les options ? Cliquez sur {a}. Cochez {b} et décochez {c}.",
+"Klik linksonder op {a} en kies {b}.": "Cliquez en bas à gauche sur {a} et choisissez {b}.",
+"Tik in het afdrukvenster rechtsboven op het deel-icoon.": "Dans la fenêtre d’impression, touchez l’icône de partage en haut à droite.",
+"Kies {a} en bewaar de PDF.": "Choisissez {a} et enregistrez le PDF.",
+"Tik bovenaan op de printer en kies {a}.": "Touchez l’imprimante en haut et choisissez {a}.",
+"Tik op de ronde knop {a} en bewaar de PDF.": "Touchez le bouton rond {a} et enregistrez le PDF.",
+"Kies bij {a} voor {b}.": "Dans {a}, choisissez {b}.",
+"Open {a}. Zet {b} uit en {c} aan.": "Ouvrez {a}. Désactivez {b} et activez {c}.",
+"Klik op {a} en kies waar je de PDF bewaart.": "Cliquez sur {a} et choisissez où enregistrer le PDF.",
+"Toon de volledige uitleg": "Afficher l’explication complète",
+"Kies niet Microsoft Print to PDF of een andere PDF-printer: dan zijn je links niet klikbaar.": "Ne choisissez pas Microsoft Print to PDF ni une autre imprimante PDF : vos liens ne seraient pas cliquables.",
+"De woorden kunnen een beetje anders zijn, afhankelijk van de taal en de versie van je browser.": "Les termes peuvent varier légèrement selon la langue et la version de votre navigateur.",
+"Is je PDF gelukt?": "Votre PDF est-il réussi ?",
+"Open je PDF even en kijk of alles goed staat.": "Ouvrez votre PDF et vérifiez que tout est en ordre.",
+"Ik kijk later": "Je vérifierai plus tard",
+"Nee, er ging iets mis": "Non, il y a un problème",
+"Ja, gelukt": "Oui, c’est bon",
+"Je links werken niet in de PDF.": "Vos liens ne fonctionnent pas dans le PDF.",
+"Je koos een PDF-printer, zoals Microsoft Print to PDF. Kies {a}.": "Vous avez choisi une imprimante PDF, comme Microsoft Print to PDF. Choisissez {a}.",
+"Er staat een datum, een titel of een webadres boven of onder op de pagina.": "Une date, un titre ou une adresse web apparaît en haut ou en bas de la page.",
+"Zet {a} uit.": "Désactivez {a}.",
+"Je kleuren, de zijbalk of je foto zijn weg.": "Vos couleurs, la barre latérale ou votre photo ont disparu.",
+"Zet {a} aan.": "Activez {a}.",
+"Wat ging er mis?": "Qu’est-ce qui n’a pas marché ?",
+"Dit zijn de drie meest voorkomende fouten:": "Voici les trois erreurs les plus fréquentes :",
+"Iets anders? Meld het via Hulp, Een fout of een idee melden.": "Autre chose ? Signalez-le via Aide, Signaler un bug ou une idée.",
+"Opnieuw proberen": "Réessayer",
+"Fijn! Volgende keer krijg je een kortere uitleg.": "Parfait ! La prochaine fois, vous aurez une explication plus courte."
 }};
 const I18N_CTX = {en:[
   ['.cpart > span', 'Links', 'Links'],
@@ -4204,7 +4377,7 @@ function renderPreview(){
   const gh = !asLetter && ghostOn(); if(!gh){ ghostSecs = new Set(); ghostP = new Set(); }
   cv.innerHTML = (asLetter ? renderLetter(state, currentLetterResolved()) : renderCV(gh ? ghostState() : state)) + '<div class="markers" id="markers"></div>'; hyphenate(cv); if(gh) markGhost(cv); updGhostHint();
   markRows(cv); if(document.fonts && document.fonts.ready) document.fonts.ready.then(()=>markRows(cv));
-  document.querySelectorAll('#viewToggle button').forEach(b=>b.classList.toggle('active', b.dataset.view===ui.view));
+  document.querySelectorAll('#viewToggle button').forEach(b=>b.classList.toggle('active', b.dataset.view===(oldOn?'old':ui.view)));
   document.title = docName(state)+' · CV Ateljee';
   $('#docName').textContent = (activeDoc()||{}).name || '';
   requestAnimationFrame(()=>{ fitPreview(); updatePages(); });
@@ -5295,7 +5468,7 @@ document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
 }));
 
 /* ================= Brief ================= */
-function setView(v){ if(ui.view===v) return; ui.view = v; renderPreview(); }
+function setView(v){ if(v==='old'){ oldShow(true); return; } const was = oldOn; if(was) oldShow(false); if(ui.view===v){ if(was) renderPreview(); return; } ui.view = v; renderPreview(); }
 $('#viewToggle').addEventListener('click', e=>{ const b = e.target.closest('[data-view]'); if(b) setView(b.dataset.view); });
 document.addEventListener('click', e=>{ if(!e.target.closest('[data-appvac]')) return;
   const a = store.apps.find(x=>x.id===appsUI.sel);
@@ -5772,6 +5945,7 @@ $('#welStart').addEventListener('click', ()=>{
   closeModal('welcomeModal'); markWelcomed();
   if(welcomeFirst) setTimeout(openGallery, 150);
 });
+$('#welPdf').addEventListener('click', ()=>{ closeModal('welcomeModal'); markWelcomed(); oldPick(); });
 $('#welSample').addEventListener('click', ()=>{
   closeModal('welcomeModal'); markWelcomed();
   persistNow();
@@ -5815,7 +5989,7 @@ document.querySelector('.topbar').addEventListener('click', e=>{
         (()=>{ const u = storeUse(), pct = Math.min(100, Math.round(u/(5*1048576)*100)); return '<li><span style="flex:1">Opslag in deze browser: <b>'+fmtMB(u)+'</b> van ongeveer 5 MB'+(pct>=80?' <b style="color:var(--ui-danger)">(bijna vol)</b>':'')+'.<span class="mem-bar"><i style="width:'+Math.max(2,pct)+'%"'+(pct>=80?' class="full"':'')+'></i></span><small class="hint" style="display:block;margin:4px 0 0">Foto\u2019s, artwork en eigen lettertypes nemen de meeste plaats in.</small></span></li>'; })()+
         '<li><span><a href="'+GH+'" target="_blank" rel="noopener">CV Ateljee op GitHub</a> · <a href="'+GH+'/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Wat is er nieuw</a></span></li>'+
         '<li><span>Gemaakt door Claude, met Nerud De Zutter.</span></li></ul>'); }
-    if(it.id==='pdf') openModal('printModal');
+    if(it.id==='pdf') openPrintGuide(true);
     if(it.id==='keys') openInfo('Sneltoetsen','<ul class="info-list">'+
       [['Ctrl + Z','Ongedaan maken'],['Ctrl + Y','Opnieuw'],['Ctrl + P','Download PDF'],['Esc','Een venster of menu sluiten'],['Tab','Naar het volgende vak of de volgende knop']].map(([k,t])=>'<li><span class="k">'+k.split(' + ').map(x=>'<kbd>'+x+'</kbd>').join(' + ')+'</span><span>'+t+'</span></li>').join('')+
       '</ul><p class="hint">Op een Mac gebruik je Cmd in plaats van Ctrl. In een tekstvak werken Ctrl + Z en Ctrl + Y gewoon voor de tekst zelf.</p>');
@@ -5840,12 +6014,14 @@ document.querySelector('.topbar').addEventListener('click', e=>{
   if(a==='file') openPopover(b,[
     {id:'export',label:'Dit CV bewaren als bestand',about:'Om door te sturen of later te openen (.json)'},
     {id:'import',label:'Bestand openen',about:'Een CV, een ontwerp of een reservekopie'},
+    {id:'oldpdf',label:'Oud CV inlezen (PDF)',about:'Je oude CV naast je nieuwe, om tekst over te nemen'},
     {sep:1},
     {id:'backup',label:'Reservekopie van alles',about:'Al je CV’s, brieven en sollicitaties in één bestand'}
   ], it=>{
     if(it.id==='export') exportJSON();
     if(it.id==='backup') exportBackup();
     if(it.id==='import') $('#importFile').click();
+    if(it.id==='oldpdf') oldPick();
   });
 });
 const THEMES = [['auto','Zoals mijn computer'],['licht','Licht'],['donker','Donker']];
@@ -5857,7 +6033,7 @@ function themeSet(t, quiet){ try{ const u = JSON.parse(localStorage.getItem(UIKE
 $('#themeTg').addEventListener('click', ()=>{ const dark = document.documentElement.getAttribute('data-theme')==='dark'; themeSet(dark ? 'licht' : 'donker', true); });
 themeSync();
 if(darkMQ){ try{ darkMQ.addEventListener('change', themeApply); }catch(e){ try{ darkMQ.addListener(themeApply); }catch(e2){} } }
-const APP_VERSION = '24.2', APP_DATE = '2026-11-08';
+const APP_VERSION = '26', APP_DATE = '2026-11-09';
 const GH = 'https://github.com/neruddz/cv-ateljee';
 function storeUse(){ let n = 0; try{ for(let i=0;i<localStorage.length;i++){ const k = localStorage.key(i); n += k.length + (localStorage.getItem(k)||'').length; } }catch(e){} return n*2; }
 function fmtMB(b){ return b < 1048576 ? Math.max(1, Math.round(b/1024))+' KB' : (b/1048576).toLocaleString(toolLocale(),{maximumFractionDigits:1, minimumFractionDigits:1})+' MB'; }
@@ -5914,6 +6090,7 @@ function exportJSON(){
 }
 $('#importFile').addEventListener('change', e=>{
   const f = e.target.files[0]; e.target.value=''; if(!f) return;
+  if(/\.pdf$/i.test(f.name) || f.type==='application/pdf'){ oldOpen(f); return; }
   const r = new FileReader();
   r.onload = ()=>{
     try{
@@ -6396,14 +6573,6 @@ $('#cropApply').addEventListener('click', ()=>{
 });
 
 /* ================= Afdrukken ================= */
-function startPrint(){
-  let skip=false; try{ skip = localStorage.getItem(PRINT_KEY)==='1'; }catch(e){}
-  if(skip) doPrint(); else openModal('printModal');
-}
-$('#printGo').addEventListener('click', ()=>{
-  if($('#printSkip').checked){ try{ localStorage.setItem(PRINT_KEY,'1'); }catch(e){} }
-  closeModal('printModal'); setTimeout(doPrint, 150);
-});
 function doPrint(){
   persistNow();
   const nm = noHy([state.personal.firstName,state.personal.lastName].filter(Boolean).join(' '));
@@ -6623,7 +6792,8 @@ function updGhostHint(){
 addEventListener('beforeprint', ()=>{ if(ghostOn()){ ghostPause = true; renderPreview(); } });
 addEventListener('afterprint', ()=>{
   const was = stepsOn(); ghostPause = false;
-  if(was && ui.view!=='letter'){ stepsEnd(); renderEditor(); renderPreview(); setTimeout(()=>toast('Goed gedaan! Je eerste PDF is klaar. Pas je CV gerust verder aan.', 5000), 300); }
+  if(was && ui.view!=='letter' && printFlow && !uiGet().pdfOk) renderPreview();   // V26: de stappen verdwijnen pas bij Ja, gelukt
+  else if(was && ui.view!=='letter'){ stepsEnd(); renderEditor(); renderPreview(); setTimeout(()=>toast('Goed gedaan! Je eerste PDF is klaar. Pas je CV gerust verder aan.', 5000), 300); }
   else if(was) renderPreview();
 });
 document.addEventListener('click', e=>{
@@ -6663,6 +6833,407 @@ function langAfterSwitch(){
   if(lo===store.active && state.design.lang!==toolLang && T[toolLang] && LANG_MSG[state.design.lang])
     setTimeout(()=>toastAct(tr(LANG_MSG[state.design.lang]), tr(LANG_BTN[toolLang]), ()=>{ const doc = activeDoc(); if(doc && ['Mijn CV','My CV','Mon CV'].includes(doc.name)){ doc.name = tr('Mijn CV'); $('#docName').textContent = doc.name; } setDesign('lang', toolLang); toast(tr('Klaar. Je eigen tekst bleef zoals hij was. Ctrl+Z zet het terug.'), 4500); }), 900);
 }
+
+/* ================= Oud CV inlezen (V25) ================= */
+// Je oude CV (PDF) staat naast je nieuwe. De tekst wordt in je browser gelezen met pdf.js, dat pas geladen wordt als je het gebruikt.
+// Het bestand verlaat je computer niet en de tekst wordt niet bewaard. De code van pdf.js wordt gecontroleerd met een vingerafdruk (SHA-384).
+const PDFJS = {
+  base: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@6.5.438/',
+  main: ['legacy/build/pdf.min.mjs', 'sha384-8Nzt4NtLKsO5Ksqwrdc+JzLh0297H8590bi0lcBPKcMRxReio/DNZsRsiBMZydqe'],
+  worker: ['legacy/build/pdf.worker.min.mjs', 'sha384-h2OX4gf3I6e1sZFfB/7wpAKzqaygzUba1e7GWT5x1gZqWrNDRIrSERQHlEFPSfu+']
+};
+let pdfLib = null, oldDoc = null, oldOn = false, oldTarget = '';
+async function pdfMod([path, hash]){
+  const r = await fetch(PDFJS.base + path, {mode:'cors', credentials:'omit', cache:'force-cache'});
+  if(!r.ok) throw new Error('net');
+  const buf = await r.arrayBuffer();
+  const dig = new Uint8Array(await crypto.subtle.digest('SHA-384', buf));
+  let bin = ''; dig.forEach(b=>bin += String.fromCharCode(b));
+  if('sha384-'+btoa(bin) !== hash) throw new Error('integrity');
+  const url = URL.createObjectURL(new Blob([buf], {type:'text/javascript'}));
+  try{ return await import(url); } finally{ setTimeout(()=>URL.revokeObjectURL(url), 1000); }
+}
+async function loadPdfLib(){
+  if(pdfLib) return pdfLib;
+  if(!window.crypto || !crypto.subtle) throw new Error('crypto');
+  const [lib, wk] = await Promise.all([pdfMod(PDFJS.main), pdfMod(PDFJS.worker)]);
+  globalThis.pdfjsWorker = wk;            // pdf.js werkt dan zonder aparte worker, in deze pagina
+  lib.GlobalWorkerOptions.workerSrc = PDFJS.base + PDFJS.worker[0];
+  return pdfLib = lib;
+}
+// ---------- tekst van een pagina terug in leesvolgorde ----------
+// titels met letterafstand ("P R O F I E L") weer aan elkaar
+const unspace = t => { const w = t.split(' '); return w.length>=4 && w.filter(x=>x.length===1).length >= w.length*0.7 && w.every(x=>/^\p{L}{1,3}$/u.test(x)) ? w.join('') : t; };
+function pdfLines(items, W){
+  const it = items.map(i=>Object.assign({}, i, {str: String(i.str||'').replace(/[\ue000-\uf8ff\ufffd]/g,'')})).filter(i=>i.str.trim()).map(i=>{ const t = i.transform, h = Math.hypot(t[2], t[3]) || i.height || 10; return {s:i.str, x:t[4], y:t[5], w:i.width||0, h}; });
+  if(!it.length) return [];
+  // twee kolommen? Zoek een verticale strook zonder tekst, met genoeg tekst aan beide kanten
+  const chars = it.reduce((a,i)=>a+i.s.length, 0), top = Math.max(...it.map(i=>i.y)), bot = Math.min(...it.map(i=>i.y)), H = (top-bot)||1;
+  let split = null, best = 0;
+  for(let sx = W*0.2; sx <= W*0.8; sx += 2){
+    const L = it.filter(i=>i.x+i.w <= sx), R = it.filter(i=>i.x >= sx), cross = it.length - L.length - R.length;
+    if(cross > Math.max(2, it.length*0.02) || !L.length || !R.length) continue;
+    const lc = L.reduce((a,i)=>a+i.s.length,0), rc = R.reduce((a,i)=>a+i.s.length,0);
+    if(lc < chars*0.15 || rc < chars*0.15) continue;
+    const span = A => (Math.max(...A.map(i=>i.y)) - Math.min(...A.map(i=>i.y))) / H;
+    if(span(L) < 0.4 || span(R) < 0.4) continue;
+    const gap = Math.min(...R.map(i=>i.x)) - Math.max(...L.map(i=>i.x+i.w));
+    const score = gap*1000 - cross*100000 + Math.min(lc,rc)/chars;
+    if(split===null || score > best){ split = sx; best = score; }
+  }
+  const groups = split===null ? [it] : (()=>{ const F = it.filter(i=>!(i.x+i.w<=split) && !(i.x>=split)); return [F, it.filter(i=>i.x+i.w<=split), it.filter(i=>i.x>=split)].filter(g=>g.length); })();
+  const mkLines = g=>{ const lines = [];
+    g.slice().sort((a,b)=>b.y-a.y || a.x-b.x).forEach(i=>{ const l = lines.find(L=>Math.abs(L.y - i.y) < Math.min(L.h, i.h)*0.5); if(l){ l.items.push(i); l.h = Math.max(l.h, i.h); } else lines.push({y:i.y, h:i.h, items:[i]}); });
+    return lines.sort((a,b)=>b.y-a.y); };
+  // binnen een blok: een smalle kolom ernaast (zoals plaats en datum naast een job)? Dan eerst die kolom, dan de rest.
+  const subSplit = blk=>{
+    const its = blk.flatMap(l=>l.items); if(blk.length < 3) return [blk];
+    const x0 = Math.min(...its.map(i=>i.x)), x1 = Math.max(...its.map(i=>i.x+i.w)), ch = its.reduce((a,i)=>a+i.s.length,0);
+    let bestS = null, bestGap = 0;
+    for(let sx = x0+10; sx < x1-10; sx += 2){
+      if(its.some(i=>i.x < sx-0.5 && i.x+i.w > sx+0.5)) continue;
+      const L = its.filter(i=>i.x+i.w <= sx+0.5), R = its.filter(i=>i.x+i.w > sx+0.5);
+      const nl = A => new Set(A.map(i=>Math.round(i.y))).size;
+      if(nl(L) < 2 || nl(R) < 2) continue;
+      if(L.reduce((a,i)=>a+i.s.length,0) < ch*0.08 || R.reduce((a,i)=>a+i.s.length,0) < ch*0.08) continue;
+      const gap = Math.min(...R.map(i=>i.x)) - Math.max(...L.map(i=>i.x+i.w));
+      if(gap > bestGap){ bestGap = gap; bestS = sx; }
+    }
+    if(bestS===null || bestGap < 6) return [blk];
+    return [mkLines(its.filter(i=>i.x+i.w <= bestS+0.5)), mkLines(its.filter(i=>i.x+i.w > bestS+0.5))];
+  };
+  const out = [];
+  groups.forEach((g, gi)=>{
+    const lines = mkLines(g);
+    const hs = lines.map(l=>l.h).sort((a,b)=>a-b), med = hs[Math.floor(hs.length/2)] || 10;
+    const steps = []; for(let k=1;k<lines.length;k++) steps.push(lines[k-1].y - lines[k].y); steps.sort((a,b)=>a-b);
+    const lead = steps[Math.floor(steps.length/2)] || med*1.3;
+    const blocks = [];
+    lines.forEach((l,k)=>{ if(!k || lines[k-1].y - l.y > lead*1.6) blocks.push([l]); else blocks[blocks.length-1].push(l); });
+    if(gi && out.length) out.push({gap:true});
+    blocks.forEach((blk, bi)=>{
+      if(bi) out.push({gap:true});
+      subSplit(blk).forEach(part=>part.forEach(l=>{
+        l.items.sort((a,b)=>a.x-b.x);
+        const segs = []; let cur = '', end = null;
+        l.items.forEach(i=>{
+          const gapX = end===null ? 0 : i.x - end;
+          if(end!==null && gapX > l.h*1.5){ segs.push(cur.trim()); cur = ''; }
+          else if(end!==null && gapX > l.h*0.12 && !/\s$/.test(cur) && !/^\s/.test(i.s)) cur += ' ';
+          cur += i.s; end = i.x + i.w;
+        });
+        segs.push(cur.trim());
+        out.push({segs: segs.filter(Boolean).map(unspace), big: l.h > med*1.25, h: l.h});
+      }));
+    });
+  });
+  return out;
+}
+async function readOldPdf(file){
+  const lib = await loadPdfLib();
+  const data = new Uint8Array(await file.arrayBuffer());
+  const pdf = await lib.getDocument({data, isEvalSupported:false, enableXfa:false, disableFontFace:true, useSystemFonts:false, stopAtErrors:false,
+    cMapUrl: PDFJS.base+'cmaps/', cMapPacked:true, standardFontDataUrl: PDFJS.base+'standard_fonts/'}).promise;
+  const pages = [], links = [];
+  for(let n=1; n<=Math.min(pdf.numPages, 10); n++){
+    const pg = await pdf.getPage(n), vp = pg.getViewport({scale:1});
+    const tc = await pg.getTextContent();
+    pages.push(pdfLines(tc.items, vp.width));
+    try{ (await pg.getAnnotations()).forEach(a=>{ if(a.subtype==='Link' && typeof a.url==='string') links.push(a.url); }); }catch(e){}
+  }
+  try{ pdf.destroy(); }catch(e){}
+  return {name:file.name, pages, links};
+}
+// ---------- naam en contactgegevens zelf invullen, alleen in lege vakken ----------
+function oldAutofill(d){
+  const p = state.personal, done = [];
+  const lines = d.pages.flat().filter(l=>l.segs), text = lines.map(l=>l.segs.join('  ')).join('\n');
+  const empty = k => !String(p[k]||'').trim();
+  const mail = (d.links.find(u=>/^mailto:/i.test(u))||'').replace(/^mailto:/i,'').split('?')[0] || (text.match(/[\w.+-]+@[\w-]+(?:\.[\w-]+)+/)||[''])[0];
+  if(mail && empty('email')){ p.email = mail; done.push('e-mail'); }
+  let tel = '';
+  (text.match(/(?:\+|\b0)[\d][\d .()\/-]{7,}\d/g)||[]).some(m=>{ const dg = m.replace(/\D/g,''); if(dg.length>=9 && dg.length<=15 && !/^(19|20)\d\d\D+(19|20)\d\d$/.test(m.trim())) { tel = m.trim(); return true; } return false; });
+  if(tel && empty('phone')){ p.phone = tel; done.push('telefoon'); }
+  const li = (d.links.concat(text.match(/(?:https?:\/\/)?(?:[\w-]+\.)?linkedin\.com\/in\/[\w%\-]+\/?/gi)||[])).find(u=>/linkedin\.com\/in\//i.test(u));
+  if(li && empty('linkedin')){ p.linkedin = li.replace(/^https?:\/\/(www\.)?/i,'').replace(/\/$/,''); done.push('LinkedIn'); }
+  const web = d.links.concat(text.match(/\b(?:https?:\/\/|www\.)[^\s,;]+/gi)||[]).find(u=>/^(https?:\/\/|www\.)/i.test(u) && !/linkedin\.com|mailto:/i.test(u));
+  if(web && empty('website')){ p.website = web.replace(/^https?:\/\//i,'').replace(/\/$/,''); done.push('website'); }
+  // naam: de grootste regel bovenaan pagina 1, met twee tot vier woorden zonder cijfers of @
+  if(empty('firstName') && empty('lastName')){
+    const p1 = (d.pages[0]||[]).filter(l=>l.segs);
+    let cand = p1.filter(l=>{ const t = l.segs.join(' ').trim(); return /^[\p{L}'’.\- ]+$/u.test(t) && t.split(/\s+/).length>=2 && t.split(/\s+/).length<=4 && t.length<=40; }).sort((a,b)=>b.h-a.h)[0];
+    // de naam is meestal het grootste op de pagina; is die regel niet groter dan de rest, dan niets invullen
+    const hs = p1.map(l=>l.h).sort((a,b)=>a-b), med = hs[Math.floor(hs.length/2)]||10;
+    if(cand && cand.h < med*1.4) cand = null;
+    if(cand){ const w = cand.segs.join(' ').trim().split(/\s+/).map(x=>x===x.toUpperCase() && x.length>1 ? x.charAt(0)+x.slice(1).toLowerCase() : x);
+      p.firstName = w[0]; p.lastName = w.slice(1).join(' '); done.unshift('naam'); }
+  }
+  return done;
+}
+// ---------- tonen ----------
+const BULLET_RX = /^[•●▪■◦‣∙·–—\-*]\s*/;
+function oldHTML(){
+  const d = oldDoc;
+  let h = '<div class="oc-bar"><div class="oc-file"><b>Je oude CV</b><span data-notr>'+esc(d.name)+'</span></div>'+
+    '<button type="button" class="btn-primary" id="ocPut" disabled>In het vak zetten</button>'+
+    '<button type="button" class="icon-btn" data-oc="close" title="Oud CV sluiten" aria-label="Oud CV sluiten">'+ICON.x+'</button>'+
+    '<p class="oc-how" id="ocHow"></p></div><div class="oc-paper" data-notr>';
+  if(!d.pages.some(p=>p.some(l=>l.segs))) h += '<p class="oc-none" data-tr>In deze PDF staat geen tekst. Het is waarschijnlijk een scan of een afbeelding. Typ je gegevens dan over.</p>';
+  d.pages.forEach((pg, n)=>{
+    if(d.pages.length>1) h += '<div class="oc-page">'+tr('Pagina {n}',{n:n+1})+'</div>';
+    pg.forEach(l=>{ h += l.gap ? '<div class="oc-gap"></div>' : '<div class="oc-l'+(l.big?' oc-big':'')+(!l.big && l.segs.length===1 && l.segs[0].length<=40 && /\p{Lu}{3}/u.test(l.segs[0]) && !/\p{Ll}/u.test(l.segs[0]) ? ' oc-h' : '')+'">'+l.segs.map(s=>'<span>'+esc(s)+'</span>').join('<span class="oc-sp"> </span>')+'</div>'; });
+  });
+  return h + '</div>';
+}
+function oldShow(on){
+  oldOn = !!on && !!oldDoc;
+  const w = $('#previewWrap'), box = $('#oldCv');
+  w.classList.toggle('old-on', oldOn); box.hidden = !oldOn;
+  document.querySelectorAll('#viewToggle button').forEach(b=>b.classList.toggle('active', b.dataset.view===(oldOn?'old':ui.view)));
+  const ob = document.querySelector('#viewToggle [data-view="old"]'); if(ob) ob.hidden = !oldDoc;
+  if(oldOn){ if(!box.dataset.ready){ box.innerHTML = oldHTML(); box.dataset.ready = '1'; if(toolLang!=='nl') i18nTree(box.querySelector('.oc-bar')); box.querySelectorAll('[data-tr]').forEach(x=>{ x.textContent = tr(x.textContent); }); } updOldPut(); }
+}
+function oldField(){ if(!oldTarget) return null; return document.querySelector('#panelContent [data-bind="'+oldTarget+'"], #panelLetter [data-bind="'+oldTarget+'"]'); }
+function oldFieldName(el){
+  const ifl = el.closest('label.ifl'), fd = el.closest('.field');
+  const lb = ifl ? ifl.querySelector(':scope > span') : fd ? fd.querySelector('label') : null;
+  const card0 = el.closest('.card'), hasSec = !!(card0 && (card0.querySelector('.card-head h3') || card0.querySelector('.sec-title-input')));
+  const name = (lb && lb.textContent.trim()) || el.getAttribute('aria-label') || (hasSec ? '' : el.placeholder) || '';
+  const card = el.closest('.card'), ct = card && (card.querySelector('.card-head h3') || card.querySelector('.sec-title-input'));
+  const sec = ct ? (ct.value || ct.placeholder || ct.textContent || '').trim() : '';
+  return [sec, name.replace(/\s+/g,' ').replace(/\s*tonen$/,'')].filter((x,i,a)=>x && a.indexOf(x)===i).join(' › ');
+}
+function oldSelText(){
+  const s = getSelection(), box = $('#oldCv');
+  if(!s || s.isCollapsed || !box.contains(s.anchorNode) || !box.contains(s.focusNode)) return '';
+  const r = s.getRangeAt(0), lines = [];
+  box.querySelectorAll('.oc-l').forEach(l=>{ if(r.intersectsNode(l)){ const lr = document.createRange(); lr.selectNodeContents(l);
+    if(r.compareBoundaryPoints(Range.START_TO_START, lr) > 0) lr.setStart(r.startContainer, r.startOffset);
+    if(r.compareBoundaryPoints(Range.END_TO_END, lr) < 0) lr.setEnd(r.endContainer, r.endOffset);
+    const t = lr.toString().replace(/\s+/g,' ').trim(); if(t) lines.push(t); } });
+  return lines.join('\n');
+}
+function updOldPut(){
+  const b = $('#ocPut'), how = $('#ocHow'); if(!b) return;
+  const el = oldField(), txt = oldSelText();
+  b.disabled = !el || !txt;
+  b.textContent = el ? tr('In het vak zetten: {veld}', {veld: oldFieldName(el)}) : tr('In het vak zetten');
+  how.textContent = tr(!el ? 'Klik links in het vak waar de tekst moet komen. Selecteer dan hier de tekst, of klik op een regel.' : !txt ? 'Selecteer hier de tekst, of klik op een regel.' : 'Klik op de knop om de tekst over te nemen. Je kunt ook kopiëren en plakken.');
+}
+function oldPut(){
+  const el = oldField(), txt = oldSelText(); if(!el || !txt) return updOldPut();
+  const multi = el.tagName==='TEXTAREA';
+  let t = multi ? txt.split('\n').map(l=>BULLET_RX.test(l) ? '- '+l.replace(BULLET_RX,'') : l).join('\n') : txt.replace(/\n/g,' ').replace(BULLET_RX,'');
+  const cur = el.value;
+  el.value = !cur.trim() ? t : cur.replace(/\s+$/,'') + (multi ? '\n' : ' ') + t;
+  el.dispatchEvent(new Event('input', {bubbles:true}));
+  getSelection().removeAllRanges();
+  const tb = el.closest('#panelLetter') ? 'letter' : 'content'; if(ui.tab!==tb) goTab(tb);
+  const again = oldField() || el; again.classList.remove('ed-flash'); void again.offsetWidth; again.classList.add('ed-flash'); setTimeout(()=>again.classList.remove('ed-flash'), 1700);
+  if(innerWidth > 980) again.scrollIntoView({block:'nearest'});
+  toast('Overgenomen. Ctrl+Z maakt het ongedaan.');
+  updOldPut();
+}
+async function oldOpen(file){
+  if(!file) return;
+  if(!/\.pdf$/i.test(file.name) && file.type!=='application/pdf'){ toast('Kies een PDF-bestand.'); return; }
+  if(file.size > 20*1024*1024){ toast('Dit bestand is te groot (meer dan 20 MB).'); return; }
+  toast('Je oude CV wordt gelezen…', 8000);
+  try{ oldDoc = await readOldPdf(file); }
+  catch(e){
+    const m = String(e && (e.name||'')+' '+(e.message||''));
+    toast(/Password/i.test(m) ? 'Deze PDF is beveiligd met een wachtwoord. Bewaar hem eerst zonder wachtwoord.' : /net|fetch|Failed|crypto|integrity|import/i.test(m) && !/InvalidPDF/i.test(m) ? 'De PDF-lezer kon niet laden. Je hebt hiervoor internet nodig.' : 'Deze PDF kon niet gelezen worden.', 6000);
+    return;
+  }
+  const box = $('#oldCv'); delete box.dataset.ready;
+  const done = oldAutofill(oldDoc);
+  if(done.length){ save(true); renderAll(); }
+  oldShow(true);
+  if(innerWidth<=980) $('#previewWrap').scrollIntoView({behavior:'smooth'});
+  toast(done.length ? tr('Uit je oude CV ingevuld: {lijst}. Ctrl+Z maakt het ongedaan.', {lijst: done.map(x=>tr(x)).join(', ')}) : 'Je oude CV staat rechts. Neem over wat je nodig hebt.', 6000);
+}
+function oldPick(){ $('#oldFile').click(); }
+$('#oldFile').addEventListener('change', e=>{ const f = e.target.files[0]; e.target.value = ''; oldOpen(f); });
+$('#oldCv').addEventListener('click', e=>{
+  if(e.target.closest('[data-oc="close"]')){ oldDoc = null; oldShow(false); renderPreview(); toast('Oud CV gesloten. De tekst is niet bewaard.'); return; }
+  const l = e.target.closest('.oc-l');
+  if(l && getSelection().isCollapsed){ const r = document.createRange(); r.selectNodeContents(l); const s = getSelection(); s.removeAllRanges(); s.addRange(r); updOldPut(); }
+});
+$('#oldCv').addEventListener('mousedown', e=>{ if(e.target.closest('#ocPut')) e.preventDefault(); });
+$('#oldCv').addEventListener('click', e=>{ if(e.target.closest('#ocPut')) oldPut(); });
+document.addEventListener('selectionchange', ()=>{ if(oldOn) updOldPut(); });
+document.addEventListener('focusin', e=>{
+  const el = e.target;
+  if(!el.matches || !el.matches('#panelContent [data-bind], #panelLetter [data-bind]') || !/^(INPUT|TEXTAREA)$/.test(el.tagName) || ['checkbox','radio','range','color','file'].includes(el.type) || el.classList.contains('sec-title-input')) return;
+  oldTarget = el.dataset.bind; if(oldOn) updOldPut();
+});
+addEventListener('beforeprint', ()=>{ if(oldOn) oldShow(false); });
+
+/* ================= Hulp bij de PDF (V26) ================= */
+// Herkent de browser en toont met een getekende schets waar je klikt. Na het afdrukken: "Is je PDF gelukt?"
+const BROWSERS = [['chrome','Chrome'],['edge','Edge'],['safari','Safari (Mac)'],['firefox','Firefox'],['ios','iPhone of iPad'],['android','Android']];
+function detectBrowser(){
+  const ua = navigator.userAgent || '';
+  if(/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) return 'ios';
+  if(/Android/.test(ua)) return 'android';
+  if(/Edg\//.test(ua)) return 'edge';
+  if(/Firefox\//.test(ua)) return 'firefox';
+  if(/Chrome\/|Chromium\//.test(ua)) return 'chrome';
+  if(/Safari\//.test(ua)) return 'safari';
+  return 'chrome';
+}
+// De woorden zoals de browser ze zelf toont (in de taal van de tool; de browser kan een andere taal hebben)
+const BR_LBL = {
+  nl:{ chrome:{dest:'Bestemming', pdf:'Opslaan als pdf', more:'Meer instellingen', head:'Kop- en voetteksten', back:'Achtergrondafbeeldingen', save:'Opslaan', cancel:'Annuleren'},
+       edge:{dest:'Printer', pdf:'Opslaan als PDF', more:'Meer instellingen', head:'Kop- en voetteksten', back:'Achtergrondafbeeldingen', save:'Opslaan', cancel:'Annuleren'},
+       firefox:{dest:'Bestemming', pdf:'Opslaan naar PDF', more:'Meer instellingen', head:'Kop- en voetteksten afdrukken', back:'Achtergronden afdrukken', save:'Opslaan', cancel:'Annuleren'},
+       safari:{pdf:'PDF', bewaar:'Bewaar als PDF', details:'Toon details', head:'Druk kop- en voetteksten af', back:'Druk achtergronden af', save:'Druk af', cancel:'Annuleer'},
+       ios:{opts:'Opties', cancel:'Annuleer', files:'Bewaar in Bestanden', print:'Druk af'},
+       android:{pdf:'Opslaan als pdf', knop:'PDF'} },
+  en:{ chrome:{dest:'Destination', pdf:'Save as PDF', more:'More settings', head:'Headers and footers', back:'Background graphics', save:'Save', cancel:'Cancel'},
+       edge:{dest:'Printer', pdf:'Save as PDF', more:'More settings', head:'Headers and footers', back:'Background graphics', save:'Save', cancel:'Cancel'},
+       firefox:{dest:'Destination', pdf:'Save to PDF', more:'More settings', head:'Print headers and footers', back:'Print backgrounds', save:'Save', cancel:'Cancel'},
+       safari:{pdf:'PDF', bewaar:'Save as PDF', details:'Show Details', head:'Print headers and footers', back:'Print backgrounds', save:'Print', cancel:'Cancel'},
+       ios:{opts:'Options', cancel:'Cancel', files:'Save to Files', print:'Print'},
+       android:{pdf:'Save as PDF', knop:'PDF'} },
+  fr:{ chrome:{dest:'Destination', pdf:'Enregistrer au format PDF', more:'Plus de paramètres', head:'En-têtes et pieds de page', back:'Graphiques d’arrière-plan', save:'Enregistrer', cancel:'Annuler'},
+       edge:{dest:'Imprimante', pdf:'Enregistrer au format PDF', more:'Plus de paramètres', head:'En-têtes et pieds de page', back:'Graphismes d’arrière-plan', save:'Enregistrer', cancel:'Annuler'},
+       firefox:{dest:'Destination', pdf:'Enregistrer au format PDF', more:'Plus de paramètres', head:'Imprimer les en-têtes et pieds de page', back:'Imprimer les arrière-plans', save:'Enregistrer', cancel:'Annuler'},
+       safari:{pdf:'PDF', bewaar:'Enregistrer au format PDF', details:'Afficher les détails', head:'Imprimer les en-têtes et pieds de page', back:'Imprimer les arrière-plans', save:'Imprimer', cancel:'Annuler'},
+       ios:{opts:'Options', cancel:'Annuler', files:'Enregistrer dans Fichiers', print:'Imprimer'},
+       android:{pdf:'Enregistrer au format PDF', knop:'PDF'} }
+};
+const brL = br => (BR_LBL[toolLang]||BR_LBL.nl)[br] || BR_LBL.nl[br];
+const B_ = t => '<b class="br-l">'+esc(t)+'</b>';
+let pdfBr = (()=>{ try{ const b = JSON.parse(localStorage.getItem(UIKEY)||'{}').pdfBr; return BROWSERS.some(x=>x[0]===b) ? b : ''; }catch(e){ return ''; } })() || detectBrowser();
+function pdfSteps(br){
+  const L = brL(br);
+  if(br==='safari') return [tr('Zie je de opties niet? Klik op {a}. Vink {b} aan en {c} uit.', {a:B_(L.details), b:B_(L.back), c:B_(L.head)}),
+    tr('Klik linksonder op {a} en kies {b}.', {a:B_(L.pdf), b:B_(L.bewaar)})];
+  if(br==='ios') return [tr('Tik in het afdrukvenster rechtsboven op het deel-icoon.'), tr('Kies {a} en bewaar de PDF.', {a:B_(L.files)})];
+  if(br==='android') return [tr('Tik bovenaan op de printer en kies {a}.', {a:B_(L.pdf)}), tr('Tik op de ronde knop {a} en bewaar de PDF.', {a:B_(L.knop)})];
+  return [tr('Kies bij {a} voor {b}.', {a:B_(L.dest), b:B_(L.pdf)}), tr('Open {a}. Zet {b} uit en {c} aan.', {a:B_(L.more), b:B_(L.head), c:B_(L.back)}), tr('Klik op {a} en kies waar je de PDF bewaart.', {a:B_(L.save)})];
+}
+// ---------- getekende schetsen ----------
+function skText(x, y, t, cls, anchor){ return '<text x="'+x+'" y="'+y+'" class="'+(cls||'sk-t')+'"'+(anchor?' text-anchor="'+anchor+'"':'')+'>'+esc(t)+'</text>'; }
+function skNum(x, y, n){ return '<circle cx="'+x+'" cy="'+y+'" r="10" class="sk-nb"/><text x="'+x+'" y="'+(y+4)+'" class="sk-nt" text-anchor="middle">'+n+'</text>'; }
+function skRing(x, y, w, h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" class="sk-ring"/>'; }
+function skPage(x, y, w, h){ let s = '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="2" class="sk-page"/><rect x="'+x+'" y="'+y+'" width="'+(w*0.32)+'" height="'+h+'" class="sk-side"/>';
+  for(let i=0;i<7;i++) s += '<rect x="'+(x+w*0.4)+'" y="'+(y+14+i*(h-24)/7)+'" width="'+(w*(i%3===0?0.4:0.5))+'" height="3" rx="1.5" class="sk-line"/>'; return s; }
+function sketch(br){
+  const L = brL(br);
+  if(br==='ios' || br==='android'){
+    let s = '<svg viewBox="0 0 520 300" class="pdf-sketch" role="img" aria-label="'+esc(tr('Schets van het afdrukvenster'))+'" data-notr>';
+    s += '<rect x="130" y="6" width="260" height="288" rx="26" class="sk-frame"/><rect x="140" y="18" width="240" height="264" rx="16" class="sk-bg"/>';
+    if(br==='ios'){
+      s += skText(154, 42, L.cancel, 'sk-a')+skText(258, 42, L.opts, 'sk-tb', 'middle');
+      s += '<g class="sk-icon"><rect x="346" y="32" width="14" height="13" rx="2"/><path d="M353 27v11M349 31l4-4 4 4"/></g>'+skRing(337, 21, 32, 30)+skNum(398, 36, 1);
+      s += skPage(205, 62, 110, 150);
+      s += '<rect x="150" y="224" width="220" height="44" rx="10" class="sk-panel"/>'+skText(164, 251, L.files, 'sk-tb')+'<g class="sk-icon"><path d="M346 240h14v12h-14z"/></g>'+skRing(146, 228, 228, 36)+skNum(398, 246, 2);
+    } else {
+      s += '<rect x="150" y="26" width="220" height="30" rx="6" class="sk-panel"/>'+skText(162, 46, L.pdf+' ▾', 'sk-tb')+skRing(146, 22, 228, 38)+skNum(398, 41, 1);
+      s += skPage(205, 72, 110, 150);
+      s += '<circle cx="330" cy="250" r="20" class="sk-go"/>'+skText(330, 254, L.knop, 'sk-gt', 'middle')+skRing(306, 226, 48, 48)+skNum(372, 250, 2);
+    }
+    return s + '</svg>';
+  }
+  let s = '<svg viewBox="0 0 520 300" class="pdf-sketch" role="img" aria-label="'+esc(tr('Schets van het afdrukvenster'))+'" data-notr>';
+  s += '<rect x="6" y="6" width="508" height="288" rx="12" class="sk-frame"/><rect x="6" y="6" width="250" height="288" rx="12" class="sk-bg"/><rect x="240" y="6" width="16" height="288" class="sk-bg"/>';
+  s += skPage(70, 26, 120, 170);
+  if(br==='safari'){
+    s += '<rect x="270" y="30" width="230" height="150" rx="8" class="sk-panel"/>';
+    s += skText(284, 56, L.details, 'sk-a');
+    s += '<rect x="284" y="78" width="12" height="12" rx="2" class="sk-on"/><path d="M286.5 84l3 3 5-6" class="sk-check"/>'+skText(304, 89, L.back);
+    s += '<rect x="284" y="104" width="12" height="12" rx="2" class="sk-off"/>'+skText(304, 115, L.head);
+    s += skRing(278, 70, 216, 52)+skNum(500, 96, 1);
+    s += '<rect x="20" y="246" width="66" height="28" rx="6" class="sk-panel"/>'+skText(32, 265, L.pdf+' ▾', 'sk-tb')+skRing(14, 240, 78, 40)+skNum(108, 260, 2);
+    s += '<rect x="92" y="190" width="150" height="44" rx="6" class="sk-menu"/>'+skText(104, 217, L.bewaar, 'sk-tb');
+    s += '<rect x="352" y="246" width="70" height="28" rx="6" class="sk-panel"/>'+skText(387, 265, L.cancel, 'sk-t', 'middle');
+    s += '<rect x="430" y="246" width="70" height="28" rx="6" class="sk-go"/>'+skText(465, 265, L.save, 'sk-gt', 'middle');
+    return s + '</svg>';
+  }
+  s += skText(276, 40, tr('Afdrukken'), 'sk-h');
+  s += skText(276, 74, L.dest, 'sk-m')+'<rect x="276" y="82" width="222" height="28" rx="6" class="sk-panel"/>'+skText(288, 101, L.pdf, 'sk-tb')+skText(486, 101, '▾', 'sk-m', 'end');
+  s += skRing(270, 77, 234, 38)+skNum(500, 70, 1);
+  s += skText(276, 140, L.more+' ▾', 'sk-a');
+  s += '<rect x="276" y="154" width="12" height="12" rx="2" class="sk-off"/>'+skText(296, 165, L.head);
+  s += '<rect x="276" y="178" width="12" height="12" rx="2" class="sk-on"/><path d="M278.5 184l3 3 5-6" class="sk-check"/>'+skText(296, 189, L.back);
+  s += skRing(270, 126, 234, 72)+skNum(500, 122, 2);
+  s += '<rect x="338" y="246" width="78" height="28" rx="6" class="sk-panel"/>'+skText(377, 265, L.cancel, 'sk-t', 'middle');
+  s += '<rect x="424" y="246" width="78" height="28" rx="6" class="sk-go"/>'+skText(463, 265, L.save, 'sk-gt', 'middle');
+  s += skRing(418, 240, 90, 40)+skNum(500, 228, 3);
+  return s + '</svg>';
+}
+// ---------- het venster voor het afdrukken ----------
+let printFull = true, printFlow = false;
+function printGuideHTML(){
+  const L = brL(pdfBr), letter = ui.view==='letter';
+  const title = tr(letter ? 'Je brief als PDF bewaren' : 'Je CV als PDF bewaren');
+  if(!printFull){
+    const key = pdfBr==='safari' ? tr('Klik linksonder op {a} en kies {b}.', {a:B_(L.pdf), b:B_(L.bewaar)}) : pdfBr==='ios' ? tr('Kies {a} en bewaar de PDF.', {a:B_(L.files)}) : pdfBr==='android' ? tr('Tik bovenaan op de printer en kies {a}.', {a:B_(L.pdf)}) : tr('Kies bij {a} voor {b}.', {a:B_(L.dest), b:B_(L.pdf)});
+    return '<h2>'+esc(title)+'</h2><p class="pg-short">'+key+'</p>'+
+      '<div class="modal-actions"><button class="btn-ghost" id="printFullBtn" style="margin-right:auto">'+esc(tr('Toon de volledige uitleg'))+'</button><button class="btn-ghost" data-close>'+esc(tr('Annuleren'))+'</button><button class="btn-primary" id="printGo">'+esc(tr('Afdrukken'))+'</button></div>';
+  }
+  const steps = pdfSteps(pdfBr);
+  return '<h2>'+esc(title)+'</h2>'+
+    '<div class="pg-br"><span>'+esc(tr('Je browser:'))+'</span><select id="pdfBrSel" aria-label="'+esc(tr('Andere browser?'))+'">'+BROWSERS.map(([v,l])=>'<option value="'+v+'"'+(v===pdfBr?' selected':'')+'>'+esc(v==='ios'?tr(l):l)+'</option>').join('')+'</select><span class="pg-other">'+esc(tr('Andere browser? Kies hem hier.'))+'</span></div>'+
+    '<div class="pg-grid"><div class="pg-sk">'+sketch(pdfBr)+'</div><ol class="pg-steps">'+steps.map(t=>'<li>'+t+'</li>').join('')+'</ol></div>'+
+    (['chrome','edge'].includes(pdfBr) ? '<p class="hint">'+esc(tr('Kies niet Microsoft Print to PDF of een andere PDF-printer: dan zijn je links niet klikbaar.'))+'</p>' : '')+
+    '<p class="hint">'+esc(tr('De woorden kunnen een beetje anders zijn, afhankelijk van de taal en de versie van je browser.'))+'</p>'+
+    '<div class="modal-actions"><button class="btn-ghost" data-close>'+esc(tr('Annuleren'))+'</button><button class="btn-primary" id="printGo">'+esc(tr('Afdrukken'))+'</button></div>';
+}
+function openPrintGuide(full){
+  printFull = full!==false;
+  const box = $('#printBody'); box.innerHTML = printGuideHTML();
+  openModal('printModal');
+  setTimeout(()=>{ const b = $('#printGo'); if(b) b.focus(); }, 50);
+}
+function startPrint(){
+  let skip=false; try{ skip = localStorage.getItem(PRINT_KEY)==='1'; }catch(e){}
+  if(skip){ doPrint(); return; }
+  openPrintGuide(!uiGet().pdfOk);
+}
+$('#printModal').addEventListener('click', e=>{
+  if(e.target.closest('#printGo')){ closeModal('printModal'); printFlow = true; setTimeout(doPrint, 150); return; }
+  if(e.target.closest('#printFullBtn')){ printFull = true; $('#printBody').innerHTML = printGuideHTML(); return; }
+});
+$('#printModal').addEventListener('change', e=>{
+  if(e.target.id==='pdfBrSel'){ pdfBr = e.target.value; uiPut({pdfBr}); $('#printBody').innerHTML = printGuideHTML(); }
+});
+// ---------- na het afdrukken: is het gelukt? ----------
+function pdfAskHTML(no){
+  const L = brL(['chrome','edge','firefox','safari'].includes(pdfBr) ? pdfBr : 'chrome');
+  if(!no) return '<h2>'+esc(tr('Is je PDF gelukt?'))+'</h2><p class="sub">'+esc(tr('Open je PDF even en kijk of alles goed staat.'))+'</p>'+
+    '<div class="modal-actions"><button class="btn-ghost" data-ask="later" style="margin-right:auto">'+esc(tr('Ik kijk later'))+'</button><button class="btn-ghost" data-ask="no">'+esc(tr('Nee, er ging iets mis'))+'</button><button class="btn-primary" data-ask="yes">'+esc(tr('Ja, gelukt'))+'</button></div>';
+  const pdfName = pdfBr==='safari' ? L.bewaar : L.pdf;
+  const P = [
+    [tr('Je links werken niet in de PDF.'), tr('Je koos een PDF-printer, zoals Microsoft Print to PDF. Kies {a}.', {a:B_(pdfName)})],
+    [tr('Er staat een datum, een titel of een webadres boven of onder op de pagina.'), tr('Zet {a} uit.', {a:B_(L.head)})],
+    [tr('Je kleuren, de zijbalk of je foto zijn weg.'), tr('Zet {a} aan.', {a:B_(L.back)})]
+  ];
+  return '<h2>'+esc(tr('Wat ging er mis?'))+'</h2><p class="sub">'+esc(tr('Dit zijn de drie meest voorkomende fouten:'))+'</p>'+
+    '<ol class="pg-fix">'+P.map(([a,b])=>'<li><b>'+esc(a)+'</b><span>'+b+'</span></li>').join('')+'</ol>'+
+    '<p class="hint">'+esc(tr('Iets anders? Meld het via Hulp, Een fout of een idee melden.'))+'</p>'+
+    '<div class="modal-actions"><button class="btn-ghost" data-close>'+esc(tr('Sluiten'))+'</button><button class="btn-primary" data-ask="retry">'+esc(tr('Opnieuw proberen'))+'</button></div>';
+}
+function openPdfAsk(){ $('#pdfAskBody').innerHTML = pdfAskHTML(false); openModal('pdfAskModal'); }
+addEventListener('afterprint', ()=>{
+  if(!printFlow) return;
+  printFlow = false;
+  if(!uiGet().pdfOk) setTimeout(openPdfAsk, 400);
+});
+$('#pdfAskModal').addEventListener('click', e=>{
+  const b = e.target.closest('[data-ask]'); if(!b) return;
+  const a = b.dataset.ask;
+  if(a==='yes'){
+    closeModal('pdfAskModal'); uiPut({pdfOk:true});
+    if(stepsOn() && ui.view!=='letter'){ stepsEnd(); renderEditor(); renderPreview(); toast('Goed gedaan! Je eerste PDF is klaar. Pas je CV gerust verder aan.', 5000); }
+    else toast('Fijn! Volgende keer krijg je een kortere uitleg.', 4000);
+  }
+  if(a==='later') closeModal('pdfAskModal');
+  if(a==='no') $('#pdfAskBody').innerHTML = pdfAskHTML(true);
+  if(a==='retry'){ closeModal('pdfAskModal'); openPrintGuide(true); }
+});
 
 /* ================= Opstart ================= */
 function renderAll(){ renderEditor(); renderPreview(); if(ui.tab==='design') renderDesign(); if(ui.tab==='letter') renderLetterEditor(); if(ui.tab==='check') renderCheck(); updUndo(); updAppsBadge(); }
